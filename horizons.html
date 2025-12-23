@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizons Cottage | St. John, USVI</title>
+    <meta name="description" content="Horizons Cottage offers 2 bedrooms, 2-1/2 baths, and a wrap around deck to enjoy the views.">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Ensuring buttons sit on top */
+        .gallery-container { position: relative; }
+        .nav-btn { z-index: 100; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar solid-nav">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Horizons USVI</a>
+            <ul class="nav-links">
+                <li><a href="horizons.html" class="active">Horizons Cottage</a></li>
+                <li><a href="sugar-bird.html">Sugar Bird Cottage</a></li>
+                <li><a href="views.html">The Views</a></li>
+                <li><a href="rates.html">Rates & Calendar</a></li>
+                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Horizons Cottage</h1>
+            <p class="subtitle">2 Bedrooms, 2-1/2 Baths, and 2 Decks – with Ocean Views from Every Room!</p>
+        </div>
+    </header>
+
+    <section class="container content-spacing">
+        <img src="images/horizons/horizon 01.jpg" alt="Horizons Cottage Exterior" class="hero-img shadow">
+        
+        <div class="text-block centered-text mt-4">
+            <p class="large-text">Horizons Cottage is a peaceful and private, open-concept home with amazing, panoramic views of the British Virgin Islands. Perched above Johns Folly Bay, the wrap-around deck provides plenty of space and unbeatable views!</p>
+        </div>
+    </section>
+
+    <section class="bg-offwhite padding-block">
+        <div class="container">
+            
+            <div class="centered-text mb-2">
+                <h2>Open Concept Living</h2>
+                <p>Large picture windows provide unobstructed views from inside, while the lower screened louvers allow for the comfortable breeze to naturally cool the cottage.</p>
+            </div>
+
+            <img src="images/horizons/horizon 02.jpg" alt="Living Room Wide View" class="hero-img shadow mb-2">
+
+            <div class="gallery-container mt-2">
+                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <div class="swipe-gallery">
+                    <img src="images/horizons/horizon 05.jpg" alt="Living Room Couches">
+                    <img src="images/horizons/horizon 01.jpg" alt="Exterior View">
+                </div>
+                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+            </div>
+
+            <div class="centered-text mt-4 mb-2">
+                <h3>Dining & Kitchen</h3>
+                <p>The dining area seats four—perfect for games. The kitchen features large granite countertops, a breakfast bar, and everything you need to feel at home.</p>
+            </div>
+
+            <div class="gallery-container">
+                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <div class="swipe-gallery">
+                    <img src="images/horizons/horizon 03.jpg" alt="Dining Area">
+                    <img src="images/horizons/horizon 06.jpg" alt="Kitchen">
+                    <img src="images/horizons/horizon 04.jpg" alt="Dining Detail">
+                </div>
+                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container padding-block">
+        <div class="container">
+            <div class="centered-text mb-2">
+                <h2>The Bedrooms</h2>
+                <p>Convenient interior stairs lead to the lower level where both bedrooms have ensuite bathrooms.</p>
+            </div>
+            
+            <img src="images/horizons/horizon 07.jpg" alt="Stairs" class="medium-centered-img mb-2 shadow">
+
+            <h3 class="centered-text mt-4">Master Suite</h3>
+            <p class="centered-text">King bed, ensuite bathroom, and plenty of storage.</p>
+            <div class="gallery-container">
+                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <div class="swipe-gallery">
+                    <img src="images/horizons/horizon 08.jpg" alt="King Bedroom">
+                    <img src="images/horizons/horizon 09.jpg" alt="King Bedroom View">
+                    <img src="images/horizons/horizon 10.jpg" alt="King Bedroom Angle">
+                </div>
+                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+            </div>
+
+            <h3 class="centered-text mt-4">Second Bedroom</h3>
+            <p class="centered-text">Two twins (convertible to King upon request) with ensuite bathroom.</p>
+            <div class="gallery-container">
+                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <div class="swipe-gallery">
+                    <img src="images/horizons/horizon 11.jpg" alt="Twin Bedroom">
+                    <img src="images/horizons/horizon 12.jpg" alt="Twin Bedroom View">
+                </div>
+                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-offwhite padding-block">
+        <div class="container">
+            <div class="centered-text mb-2">
+                <h3>Tropical Screened Showers</h3>
+                <p>Both downstairs bathrooms have unique, completely screened tropical showers. Experience the island breeze with complete privacy.</p>
+            </div>
+            <img src="images/horizons/horizon 13.jpg" alt="Screened Shower" class="hero-img shadow">
+        </div>
+    </section>
+
+    <section class="container padding-block">
+        <div class="container">
+            <div class="centered-text mb-2">
+                <h2>Outdoor Living</h2>
+                <p>A huge wrap-around deck surrounds the upper level, offering space for dining, lounging, and hammocking.</p>
+            </div>
+
+            <div class="gallery-container">
+                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <div class="swipe-gallery">
+                    <img src="images/horizons/horizon 14.jpg" alt="Hammock">
+                    <img src="images/horizons/horizon 15.jpg" alt="Lower Deck">
+                    <img src="images/horizons/horizon 16.jpg" alt="Upper Deck">
+                    <img src="images/horizons/horizon 17.jpg" alt="Deck View">
+                    <img src="images/horizons/horizon 18.jpg" alt="Deck Seating">
+                    <img src="images/horizons/horizon 19.jpg" alt="Deck Dining">
+                    <img src="images/horizons/horizon 20.jpg" alt="Wrap Around Deck">
+                </div>
+                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-offwhite padding-block">
+        <div class="container">
+            <div class="centered-text mb-2">
+                <h2>The Views & Surroundings</h2>
+                <p>Eastern exposure allows for beautiful sunrises and cool, shaded afternoons. The cottage is private, quiet, and located on a paved road.</p>
+            </div>
+
+            <div class="gallery-container">
+                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <div class="swipe-gallery">
+                    <img src="images/horizons/horizon 21.jpg" alt="Island Glow">
+                    <img src="images/horizons/horizon 22.jpg" alt="Sunset">
+                    <img src="images/horizons/horizon 23.jpg" alt="View">
+                    <img src="images/horizons/horizon 24.jpg" alt="View 2">
+                    <img src="images/horizons/horizon 25.jpg" alt="Trees Privacy">
+                    <img src="images/horizons/horizon 26.jpg" alt="Paved Driveway">
+                    <img src="images/horizons/horizon 27.jpg" alt="Parking">
+                </div>
+                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-blue text-white padding-block">
+        <div class="container">
+            <h2 class="text-white centered-text">Amenities</h2>
+            <div class="amenities-grid">
+                <ul>
+                    <li>2 Bedrooms, sleeps 4 (1 King, 2 Twins/King)</li>
+                    <li>3 Bathrooms (2 ensuite, 1 half-bath)</li>
+                    <li>High speed Starlink internet/wi-fi with battery back-up</li>
+                    <li>Filtered, UV-treated, potable water</li>
+                    <li>High quality linens and towels</li>
+                    <li>Easy, accessible parking (Paved Road)</li>
+                    <li>Smoke detectors & fire extinguishers</li>
+                    <li>Exterior safety lighting</li>
+                </ul>
+                <ul>
+                    <li>Fully equipped kitchen with Granite countertops</li>
+                    <li>Dishwasher, oven, stove, microwave, blender</li>
+                    <li>Refrigerator with ice maker</li>
+                    <li>Outdoor gas grill</li>
+                    <li>Samsung Frame TV & Assortment of books</li>
+                    <li>Beach chairs, beach towels, and cooler</li>
+                    <li>Dining table for 4 & Couches for 5</li>
+                    <li>Nearby: Snorkeling, Hiking, Restaurants (10 mins)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container padding-block centered-text">
+        <p class="large-text">Horizons Cottage is a peaceful getaway – surrounded by nature, the sound of the ocean below, and expansive views. We invite you to spend an unforgettable vacation at our cottage!</p>
+        <img src="images/horizons/horizon 28.jpg" alt="Rainbow View" class="small-centered-img mt-4 rounded shadow">
+        <div class="mt-4">
+            <h3>Ready to Book?</h3>
+            <p><strong><a href="mailto:horizonsusvi@gmail.com?subject=Horizons%20Cottage" class="text-link">HorizonsUSVI@gmail.com</a></strong></p>
+            <p>Coral Bay, St. John, US Virgin Islands</p>
+            <p>(661) 373-1983</p>
+            <a href="rates.html" class="btn btn-primary mt-2">Check Rates & Availability</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Horizons & Sugar Bird</h4>
+                <p>Coral Bay, St. John, US Virgin Islands</p>
+                <a href="mailto:horizonsusvi@gmail.com">HorizonsUSVI@gmail.com</a>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2025 Horizons & Sugar Bird Cottages</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollGallery(button, direction) {
+            // Find the gallery associated with the clicked button
+            const container = button.parentElement;
+            const gallery = container.querySelector('.swipe-gallery');
+            
+            // Determine scroll amount (width of one image)
+            const scrollAmount = gallery.clientWidth * 0.7; // Scroll 70% of the screen width
+            
+            // Scroll smoothly
+            gallery.scrollBy({
+                left: scrollAmount * direction,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
