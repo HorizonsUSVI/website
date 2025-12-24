@@ -10,12 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* Ensuring buttons sit on top */
-        .gallery-container { position: relative; }
-        .nav-btn { z-index: 100; cursor: pointer; }
-    </style>
 </head>
 <body>
 
@@ -52,34 +46,22 @@
         <div class="container">
             
             <div class="centered-text mb-2">
-                <h2>Open Concept Living</h2>
-                <p>Large picture windows provide unobstructed views from inside, while the lower screened louvers allow for the comfortable breeze to naturally cool the cottage.</p>
+                <h2>Open Concept Living, Dining & Kitchen</h2>
+                <p>Large picture windows provide unobstructed views from inside. The space seamlessly combines the living area, dining for four, and a fully equipped kitchen with granite countertops and breakfast bar.</p>
             </div>
 
             <img src="images/horizons/horizon 02.jpg" alt="Living Room Wide View" class="hero-img shadow mb-2">
 
             <div class="gallery-container mt-2">
-                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
                     <img src="images/horizons/horizon 05.jpg" alt="Living Room Couches">
-                    <img src="images/horizons/horizon 01.jpg" alt="Exterior View">
-                </div>
-                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
-            </div>
-
-            <div class="centered-text mt-4 mb-2">
-                <h3>Dining & Kitchen</h3>
-                <p>The dining area seats four—perfect for games. The kitchen features large granite countertops, a breakfast bar, and everything you need to feel at home.</p>
-            </div>
-
-            <div class="gallery-container">
-                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
-                <div class="swipe-gallery">
                     <img src="images/horizons/horizon 03.jpg" alt="Dining Area">
                     <img src="images/horizons/horizon 06.jpg" alt="Kitchen">
                     <img src="images/horizons/horizon 04.jpg" alt="Dining Detail">
+                    <img src="images/horizons/horizon 01.jpg" alt="Exterior View">
                 </div>
-                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+                <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
 
         </div>
@@ -94,27 +76,27 @@
             
             <img src="images/horizons/horizon 07.jpg" alt="Stairs" class="medium-centered-img mb-2 shadow">
 
-            <h3 class="centered-text mt-4">Master Suite</h3>
+            <h3 class="centered-text mt-4">First Bedroom</h3>
             <p class="centered-text">King bed, ensuite bathroom, and plenty of storage.</p>
             <div class="gallery-container">
-                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
                     <img src="images/horizons/horizon 08.jpg" alt="King Bedroom">
                     <img src="images/horizons/horizon 09.jpg" alt="King Bedroom View">
                     <img src="images/horizons/horizon 10.jpg" alt="King Bedroom Angle">
                 </div>
-                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+                <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
 
             <h3 class="centered-text mt-4">Second Bedroom</h3>
             <p class="centered-text">Two twins (convertible to King upon request) with ensuite bathroom.</p>
             <div class="gallery-container">
-                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
                     <img src="images/horizons/horizon 11.jpg" alt="Twin Bedroom">
                     <img src="images/horizons/horizon 12.jpg" alt="Twin Bedroom View">
                 </div>
-                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+                <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
         </div>
     </section>
@@ -137,7 +119,7 @@
             </div>
 
             <div class="gallery-container">
-                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
                     <img src="images/horizons/horizon 14.jpg" alt="Hammock">
                     <img src="images/horizons/horizon 15.jpg" alt="Lower Deck">
@@ -147,7 +129,7 @@
                     <img src="images/horizons/horizon 19.jpg" alt="Deck Dining">
                     <img src="images/horizons/horizon 20.jpg" alt="Wrap Around Deck">
                 </div>
-                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+                <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
         </div>
     </section>
@@ -160,7 +142,7 @@
             </div>
 
             <div class="gallery-container">
-                <button class="nav-btn prev" onclick="scrollGallery(this, -1)">&#10094;</button>
+                <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
                     <img src="images/horizons/horizon 21.jpg" alt="Island Glow">
                     <img src="images/horizons/horizon 22.jpg" alt="Sunset">
@@ -170,7 +152,7 @@
                     <img src="images/horizons/horizon 26.jpg" alt="Paved Driveway">
                     <img src="images/horizons/horizon 27.jpg" alt="Parking">
                 </div>
-                <button class="nav-btn next" onclick="scrollGallery(this, 1)">&#10095;</button>
+                <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
         </div>
     </section>
@@ -235,13 +217,11 @@
             const gallery = container.querySelector('.swipe-gallery');
             
             // Determine scroll amount (width of one image)
-            const scrollAmount = gallery.clientWidth * 0.7; // Scroll 70% of the screen width
+            // We use 320 to roughly match the image width + gap
+            const scrollAmount = 350; 
             
-            // Scroll smoothly
-            gallery.scrollBy({
-                left: scrollAmount * direction,
-                behavior: 'smooth'
-            });
+            // Simple arithmetic scroll (Robust method)
+            gallery.scrollLeft += (scrollAmount * direction);
         }
     </script>
 </body>

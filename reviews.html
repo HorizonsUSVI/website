@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Reviews | Horizons & Sugar Bird Cottages</title>
+    <meta name="description" content="Verified reviews from guests who have stayed at Horizons and Sugar Bird Cottages in St. John, USVI.">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-top: 3px solid transparent; /* default */
+        }
+        /* Subtle accent border at top of card based on property */
+        .card-sugarbird { border-top-color: #d35400; }
+        .card-horizons { border-top-color: #006994; }
+
+        .stars {
+            color: #f1c40f; /* Gold */
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .review-date {
+            color: #888;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        .review-body {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .reviewer {
+            font-weight: bold;
+            color: var(--text-dark);
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            font-size: 0.9rem;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .badge-horizons { background-color: #e3f2fd; color: #006994; }
+        .badge-sugarbird { background-color: #fff3e0; color: #d35400; }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar solid-nav">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Horizons USVI</a>
+            <ul class="nav-links">
+                <li><a href="horizons.html">Horizons Cottage</a></li>
+                <li><a href="sugar-bird.html">Sugar Bird Cottage</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="views.html">The Views</a></li>
+                <li><a href="rates.html">Rates & Calendar</a></li>
+                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Guest Reviews</h1>
+            <p class="subtitle">Verified experiences from our guests over the years.</p>
+        </div>
+    </header>
+
+    <section class="container content-spacing">
+        <div class="reviews-grid">
+            
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2025</p>
+                    <p class="review-body">"The cottage was fabulous: remote, gorgeous, comfortable, clean, well situated, plenty of space and seating. I loved the location, antidote to civilization for sure. The 3 different decks were excellent. We barely needed the AC... by the next day it was just ocean breezes."</p>
+                </div>
+                <p class="reviewer">Sarah</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2025</p>
+                    <p class="review-body">"The ocean view from the property is absolutely surreal—waking up to that every morning felt like a dream. The location is perfect, close to world-class beaches that made our days full of sunshine, relaxation, and adventure."</p>
+                </div>
+                <p class="reviewer">Noah Y.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2025</p>
+                    <p class="review-body">"We had an awesome trip in St John, could have stayed another week! The layout of the house is perfect. Loved the indoor/outdoor shower. The house had everything we needed. It was heaven to spend a week enjoying the fresh ocean breezes."</p>
+                </div>
+                <p class="reviewer">Janice W.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2025</p>
+                    <p class="review-body">"Private and just lovely in every way. Hard to imagine there is a better spot on this island!"</p>
+                </div>
+                <p class="reviewer">Cindy</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2025</p>
+                    <p class="review-body">"Quiet side of the island with beautiful views! We could walk to Salt Pond Bay and Rams Head when there was no parking, which was an added bonus. Would definitely stay here again!"</p>
+                </div>
+                <p class="reviewer">Corri</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2025</p>
+                    <p class="review-body">"We felt very lucky staying at Horizons because as we explored the island, we quickly came to realize we were in the best location and probably in one of the best houses too. The house is comfortable and spacious, and the sea breezes through the louvres made everything feel cool."</p>
+                </div>
+                <p class="reviewer">Sabrina</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2025</p>
+                    <p class="review-body">"Spectacular cottage with amazing views and sounds of the ocean. Johns folly area in Coral Bay. Quiet, serene. Basically where you would imagine staying in paradise."</p>
+                </div>
+                <p class="reviewer">Shannon B.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2025</p>
+                    <p class="review-body">"The pictures do not give the view justice. Secluded side of island, but still close to everything you need. Great place."</p>
+                </div>
+                <p class="reviewer">Daniel</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2025</p>
+                    <p class="review-body">"The home is very well built and maintained, with comfortable furniture and beds. We loved eating and relaxing on the deck, and in the living room at night. The home was well stocked with everything needed for a comfortable stay."</p>
+                </div>
+                <p class="reviewer">Connie</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2025</p>
+                    <p class="review-body">"Loved the stay, and the views! The cottage was very clean and had everything we needed. We will be back!"</p>
+                </div>
+                <p class="reviewer">Dane V.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2025</p>
+                    <p class="review-body">"This is a very nice house, with incredible views and a convenient location to Coral Bay. We especially enjoyed the large wrap-around deck, which almost always allowed you to be outside, but out of the sun."</p>
+                </div>
+                <p class="reviewer">David W.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2025</p>
+                    <p class="review-body">"I enjoyed walking each morning from the cottage but you need to like hills. Salt Pond Beach and other hiking is less than a mile away. We used the snorkeling gear and beach chairs. I highly recommend the cottage."</p>
+                </div>
+                <p class="reviewer">Joan</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2025</p>
+                    <p class="review-body">"The cottage was exactly what we needed. Wonderful views, Caribbean breeze and relaxation. Everything worked well, and the cottage is well stocked for the perfect getaway. We will be back!"</p>
+                </div>
+                <p class="reviewer">Matthew H.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2025</p>
+                    <p class="review-body">"Incredible house and gorgeous views. Wish I could have stayed another week or month."</p>
+                </div>
+                <p class="reviewer">Roman G.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2025</p>
+                    <p class="review-body">"Very cool little property, with a great view! This is located in a very quiet part of the island. Definitely ideal for two people. Several excellent restaurants within 5 minutes driving in Coral Bay."</p>
+                </div>
+                <p class="reviewer">William L.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">December 2024</p>
+                    <p class="review-body">"Amazing views and such a comfortable place to call home. The views of the water and wildlife were as good as any hike or boat trip we took. Jennifer had so many great recommendations for our stay."</p>
+                </div>
+                <p class="reviewer">Emily</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">December 2024</p>
+                    <p class="review-body">"Wow, what a view! This is our 6th trip to St. John and we have rented a home each time but the view from Sugar Bird topped them all. Sitting on the deck each morning watching the sun rise over the islands of the BVI was wonderful."</p>
+                </div>
+                <p class="reviewer">Bryan G.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">November 2024</p>
+                    <p class="review-body">"My wife and I went on our honeymoon here and we loved it. Definitely tucked away on its own corner of the Island. It was very secluded and the view was spectacular. Just minutes from Salt Pond Beach."</p>
+                </div>
+                <p class="reviewer">Dan</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2024</p>
+                    <p class="review-body">"The place is small and there are a lot of stairs! But the views are stunning and there is everything you need for cooking basic meals, outdoor sunbathing, open air showers, and a very complete guide for things to do and places to go."</p>
+                </div>
+                <p class="reviewer">Martha and William P.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2024</p>
+                    <p class="review-body">"Absolutely beautiful home and location. Jennifer was very responsive and the home fit the description perfectly. We are so glad we chose to be on the quiet side of the island and would stay there again if we return."</p>
+                </div>
+                <p class="reviewer">George</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2024</p>
+                    <p class="review-body">"If you’re looking for a great view, this one can’t be beat. The wrap around deck allowed us to enjoy sun or shade at any time of the day. Kitchen was set up well, and had everything we needed to make a quick meal."</p>
+                </div>
+                <p class="reviewer">Michael S.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2024</p>
+                    <p class="review-body">"We had a lovely week here! The views were amazing and we enjoyed the privacy. We had everything we needed and loved being away from it all. Well worth it in exchange for your own private paradise."</p>
+                </div>
+                <p class="reviewer">Carey G.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2024</p>
+                    <p class="review-body">"The place was just as described. It was totally comfortable and well-stocked with everything we needed. We had a fabulous time, even with some rainy days, because the house was comfortable and the views from every room were breath-taking."</p>
+                </div>
+                <p class="reviewer">Joyce D.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">December 2023</p>
+                    <p class="review-body">"We loved our time at sugar bird cottage. We were there on our honeymoon and the location, view, and vibe of the house was outstanding. It was an amazing time and we’d highly recommend it!"</p>
+                </div>
+                <p class="reviewer">Griffin P.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">November 2023</p>
+                    <p class="review-body">"Everything advertised is exactly as is….and it’s a stunning place to be! Wonderful property manager also."</p>
+                </div>
+                <p class="reviewer">Matt B.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">September 2023</p>
+                    <p class="review-body">"We thoroughly enjoyed our time at this charming cottage. The wraparound porch hexagon nestled into the side of a hill with gorgeous views and a cozy living space, gave us a place to relax and rejuvenate in privacy."</p>
+                </div>
+                <p class="reviewer">Vivian H.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">June 2023</p>
+                    <p class="review-body">"Our second stay at Sugar Bird – as relaxing as the first, though no hurricane this time! Great spot"</p>
+                </div>
+                <p class="reviewer">Robert P.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">May 2023</p>
+                    <p class="review-body">"This is the most magical place I have been in the USA. The pictures are nothing to compare to reality. The view from the kitchen and bedroom are amazing, words can not describe. Exclusive, quiet, clean and with everything you need."</p>
+                </div>
+                <p class="reviewer">Judith B.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">May 2023</p>
+                    <p class="review-body">"Horizons Cottage is awesome! This house is as advertised with plenty of space and spectacular views of John Folly’s Bay. Also, it was quiet. We heard the ocean 24 hours a day, crickets at night, and the gentle rustling of leaves."</p>
+                </div>
+                <p class="reviewer">Larissa J.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">May 2023</p>
+                    <p class="review-body">"We really loved our stay. The Coral Bay location was wonderful, but the views from the deck were the magic. Every morning and evening we would enjoy the vistas. Great beaches were nearby."</p>
+                </div>
+                <p class="reviewer">Katherine G.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2023</p>
+                    <p class="review-body">"Beautiful getaway! My family had such a wonderful time in St John, and this house was perfect. Very clean and well kept. We had everything we needed!!"</p>
+                </div>
+                <p class="reviewer">Sherri G.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2023</p>
+                    <p class="review-body">"Breathtaking views; great part of the island for home base; many great places to snorkel and hike nearby; the cottage is well designed and organized; would stay again."</p>
+                </div>
+                <p class="reviewer">Michael W.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2023</p>
+                    <p class="review-body">"This property is all about the views. Super comfortable! We loved sitting outside and having our morning coffees. The breeze, ocean, and wind sounds made it tough to crawl out of bed."</p>
+                </div>
+                <p class="reviewer">Katelyn M.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2023</p>
+                    <p class="review-body">"We had a wonderful week at Horizons Cottage!! The house was perfect. The views from everywhere in the house are fabulous. We so enjoyed the deck for every meal, beautiful sunrises, star gazing, relaxing."</p>
+                </div>
+                <p class="reviewer">Gina H.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2023</p>
+                    <p class="review-body">"Right after we got married, we flew in and came to Sugar Bird. A dream come true! It was incredible, we loved every single detail! The location, the view, the windows, the conveniences provided, down to the cute hermit crab homes around it!"</p>
+                </div>
+                <p class="reviewer">Shane A.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">March 2023</p>
+                    <p class="review-body">"We got back in the wee hours yesterday morning, having thoroughly enjoyed our time on St. John, especially our stay at Sugar Bird. What a lovely little cottage – awesome view, comfortable bed, well equipped kitchen, and lots of extras!"</p>
+                </div>
+                <p class="reviewer">Leslie M.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2023</p>
+                    <p class="review-body">"As always, Amber and I absolutely loved staying at Sugar Bird the past few weeks. It is our home away from home. We met Dena while we were there and she is amazing. Thank you so much for allowing us to stay at your property."</p>
+                </div>
+                <p class="reviewer">Kevin K.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2023</p>
+                    <p class="review-body">"Our stay was memorable in all good ways – a cute cozy house, nicely furnished, with the most incredible sea view!"</p>
+                </div>
+                <p class="reviewer">Joyce D.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2023</p>
+                    <p class="review-body">"This was a great location. Wonderful communication and everything was perfect!"</p>
+                </div>
+                <p class="reviewer">Hayden M.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2023</p>
+                    <p class="review-body">"The view from the property is even better in person. This is not Cape Cod or the Outer Banks. This is heaven. No constant motor boats or airplanes overhead. Bring inexpensive dry goods in your carry on, buy some shrimp at the Calabash Market, and sit on the deck overlooking the beauty."</p>
+                </div>
+                <p class="reviewer">Heather P.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2023</p>
+                    <p class="review-body">"Great place to stay close to Coral Bay! Very quiet with amazing views. The host was very easy to communicate with. Highly recommend if you’re looking for a relaxing getaway."</p>
+                </div>
+                <p class="reviewer">Alexandra H.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">November 2022</p>
+                    <p class="review-body">"Happy hour views from the deck.. spectacular! Location perfect for Coral Bay! Layout of home ideal for 4 adults!"</p>
+                </div>
+                <p class="reviewer">Jeanne E.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">September 2022</p>
+                    <p class="review-body">"Great stay out on the East end of St John. Had some considerable excitement with Hurricane Fiona, which hit us right at the end of the stay. Jennifer was super excellent at communicating with us."</p>
+                </div>
+                <p class="reviewer">Robert P.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">August 2022</p>
+                    <p class="review-body">"Horizons Cottage is a clean, updated, and well apportioned getaway nestled on a hill overlooking Johns Folly Bay. Sweeping panoramic views of the East End, southern BVI chain, and vibrant sea life."</p>
+                </div>
+                <p class="reviewer">Andrew M.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">June 2022</p>
+                    <p class="review-body">"My husband and I stayed here for our honeymoon! It was the perfect quiet, secluded spot with amazing views!! If nothing else, the view alone makes this rental worth every penny!"</p>
+                </div>
+                <p class="reviewer">Kit C.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">June 2022</p>
+                    <p class="review-body">"Wow, where to start. This is a nice little cottage on a hillside with some really great views. It is secluded and quiet located only about 30ft from the end of the road."</p>
+                </div>
+                <p class="reviewer">Richard Gotwals</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">June 2022</p>
+                    <p class="review-body">"I know this island is still under repair from the hurricane that hit a while ago, but the island is still beautiful, the people are amazing, and this place was very peaceful. I would definitely rent this place again."</p>
+                </div>
+                <p class="reviewer">Heidi S.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">May 2022</p>
+                    <p class="review-body">"Thank you Jennifer for everything! we thoroughly enjoyed our stay 🙂 till next time!"</p>
+                </div>
+                <p class="reviewer">Rose R.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">May 2022</p>
+                    <p class="review-body">"The place was clean, secluded, with great views. Has a nice layout with living area and kitchen on the top floor and 2 br and 2ba in the floor below. It is very close to salt pond bay and the Lameshur bays."</p>
+                </div>
+                <p class="reviewer">Jared C.</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">May 2022</p>
+                    <p class="review-body">"What a wonderful stay. The place was well equipped for our needs and offered a spectacular view! It felt like we were staying in a tree house…and it was amazing."</p>
+                </div>
+                <p class="reviewer">Timothy H.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2022</p>
+                    <p class="review-body">"When we enter the house we were thrilled by the view from three sides of the house and couldn’t decide where to have our first happy hour on the wrap around deck which Overlooked a gorgeous day on the east side of the island."</p>
+                </div>
+                <p class="reviewer">Susan D.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">February 2022</p>
+                    <p class="review-body">"Amazing stay on St. John thanks to this cottage"</p>
+                </div>
+                <p class="reviewer">Scib Trista</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">January 2022</p>
+                    <p class="review-body">"A gem of a cottage! Well equipped, clean with great privacy and fantastic views. Perfect for a couple. Highly recommend."</p>
+                </div>
+                <p class="reviewer">Mike Podkin</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">June 2021</p>
+                    <p class="review-body">"Clean, well kept and no better views on St. John. It is on the Coral Bay side of the island, away from the crowds of Cruz Bay. But the island is small so you’re never far from anything."</p>
+                </div>
+                <p class="reviewer">Terry Baughman</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">Past Guest</p>
+                    <p class="review-body">"Everything was better than described... The deck and the porch…OMG. Location ideal for all activities especially accesses to the national park. Very, very quiet. The very best night’s sleep. If available, I will be returning."</p>
+                </div>
+                <p class="reviewer">A Perfect Vacation Home</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">Past Guest</p>
+                    <p class="review-body">"Being urban dwellers we especially appreciated the outdoor decks on both floors that boasts quite an impressive view. The house itself is well equipped and nicely set up so we felt right at home."</p>
+                </div>
+                <p class="reviewer">Sweet Breezes</p>
+            </div>
+
+            <div class="review-card card-sugarbird">
+                <div>
+                    <span class="badge badge-sugarbird">Sugar Bird Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">Past Guest</p>
+                    <p class="review-body">"This is our fourth year on the island in November, and this is hands-down the best place we’ve ever stayed. The location is simply amazing, 180-degree views of the sea from the fabulous wrap-around porch with a generous breeze."</p>
+                </div>
+                <p class="reviewer">Flawless. Wonderful.</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">June 2019</p>
+                    <p class="review-body">"Great views toward the BVI and an easterly wind that beats the heat. We stay here every year and like the quick access to the National Park bays as well as east end for great snorkeling."</p>
+                </div>
+                <p class="reviewer">Jim Weitzel</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">November 2016</p>
+                    <p class="review-body">"We just finished a delightful week at Horizon’s Cottage. The cottage is in great shape and has wonderful views. It sleeps 4 very comfortably with 2 large bedrooms and 2 1/2 baths."</p>
+                </div>
+                <p class="reviewer">Wendy Harman</p>
+            </div>
+
+            <div class="review-card card-horizons">
+                <div>
+                    <span class="badge badge-horizons">Horizons Cottage</span>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-date">April 2016</p>
+                    <p class="review-body">"Love, love, love Horizons Cottage in St. John! We cannot wait to return!"</p>
+                </div>
+                <p class="reviewer">Gary N Tammy Chambers</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Horizons & Sugar Bird</h4>
+                <p>Coral Bay, St. John, US Virgin Islands</p>
+                <a href="mailto:horizonsusvi@gmail.com">HorizonsUSVI@gmail.com</a>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2025 Horizons & Sugar Bird Cottages</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
