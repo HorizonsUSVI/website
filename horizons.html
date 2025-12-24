@@ -10,6 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .gallery-container { position: relative; }
+        .nav-btn { z-index: 999; cursor: pointer; }
+    </style>
 </head>
 <body>
 
@@ -17,11 +22,12 @@
         <div class="container nav-flex">
             <a href="index.html" class="logo">Horizons USVI</a>
             <ul class="nav-links">
-                <li><a href="horizons.html" class="active">Horizons Cottage</a></li>
-                <li><a href="sugar-bird.html">Sugar Bird Cottage</a></li>
-                <li><a href="views.html">The Views</a></li>
-                <li><a href="rates.html">Rates & Calendar</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
+                <li><a href="horizons.html" class="active">HORIZONS</a></li>
+                <li><a href="sugar-bird.html">SUGAR BIRD</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="views.html">THE VIEWS</a></li>
+                <li><a href="rates.html">RATES & CALENDAR</a></li>
+                <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
             </ul>
             <div class="hamburger">☰</div>
         </div>
@@ -38,32 +44,29 @@
         <img src="images/horizons/horizon 01.jpg" alt="Horizons Cottage Exterior" class="hero-img shadow">
         
         <div class="text-block centered-text mt-4">
-            <p class="large-text">Horizons Cottage is a peaceful and private, open-concept home with amazing, panoramic views of the British Virgin Islands. Perched above Johns Folly Bay, the wrap-around deck provides plenty of space and unbeatable views!</p>
+            <p class="large-text">Horizons Cottage is a peaceful and private, open-concept home with amazing, panoramic views of the British Virgin Islands and the East end of St John, near beautiful Coral Bay, St. John, USVI. Perched above Johns Folly Bay, the wrap-around deck provides plenty of space and unbeatable views!</p>
         </div>
     </section>
 
     <section class="bg-offwhite padding-block">
         <div class="container">
-            
             <div class="centered-text mb-2">
-                <h2>Open Concept Living, Dining & Kitchen</h2>
-                <p>Large picture windows provide unobstructed views from inside. The space seamlessly combines the living area, dining for four, and a fully equipped kitchen with granite countertops and breakfast bar.</p>
+                <h2>The Great Room</h2>
+                <p>Large picture windows provide unobstructed views from inside. The space seamlessly combines the living area, dining for four, and a fully equipped kitchen with granite countertops.</p>
             </div>
-
+            
             <img src="images/horizons/horizon 02.jpg" alt="Living Room Wide View" class="hero-img shadow mb-2">
 
-            <div class="gallery-container mt-2">
+            <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
-                    <img src="images/horizons/horizon 05.jpg" alt="Living Room Couches">
-                    <img src="images/horizons/horizon 03.jpg" alt="Dining Area">
+                    <img src="images/horizons/horizon 05.jpg" alt="Living room couches">
+                    <img src="images/horizons/horizon 03.jpg" alt="Dining area">
+                    <img src="images/horizons/horizon 04.jpg" alt="Dining detail">
                     <img src="images/horizons/horizon 06.jpg" alt="Kitchen">
-                    <img src="images/horizons/horizon 04.jpg" alt="Dining Detail">
-                    <img src="images/horizons/horizon 01.jpg" alt="Exterior View">
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
-
         </div>
     </section>
 
@@ -71,13 +74,13 @@
         <div class="container">
             <div class="centered-text mb-2">
                 <h2>The Bedrooms</h2>
-                <p>Convenient interior stairs lead to the lower level where both bedrooms have ensuite bathrooms.</p>
+                <p>Convenient interior stairs lead to the lower bedroom level where both bedrooms have ensuite bathrooms.</p>
             </div>
             
-            <img src="images/horizons/horizon 07.jpg" alt="Stairs" class="medium-centered-img mb-2 shadow">
+            <img src="images/horizons/horizon 07.jpg" alt="Stairs to lower level" class="medium-centered-img mb-2 shadow">
 
             <h3 class="centered-text mt-4">First Bedroom</h3>
-            <p class="centered-text">King bed, ensuite bathroom, and plenty of storage.</p>
+            <p class="centered-text">Large room with King bed, louvered windows, and ensuite bathroom.</p>
             <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
@@ -89,12 +92,12 @@
             </div>
 
             <h3 class="centered-text mt-4">Second Bedroom</h3>
-            <p class="centered-text">Two twins (convertible to King upon request) with ensuite bathroom.</p>
+            <p class="centered-text">Two twins (can be made into a king if requested), also with an ensuite bathroom.</p>
             <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
-                    <img src="images/horizons/horizon 11.jpg" alt="Twin Bedroom">
-                    <img src="images/horizons/horizon 12.jpg" alt="Twin Bedroom View">
+                    <img src="images/horizons/horizon 12.jpg" alt="Twin Bedroom">
+                    <img src="images/horizons/horizon 11.jpg" alt="Twin Bedroom View">
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
@@ -105,7 +108,7 @@
         <div class="container">
             <div class="centered-text mb-2">
                 <h3>Tropical Screened Showers</h3>
-                <p>Both downstairs bathrooms have unique, completely screened tropical showers. Experience the island breeze with complete privacy.</p>
+                <p>Both downstairs bathrooms have unique, completely screened, tropical showers.</p>
             </div>
             <img src="images/horizons/horizon 13.jpg" alt="Screened Shower" class="hero-img shadow">
         </div>
@@ -115,19 +118,19 @@
         <div class="container">
             <div class="centered-text mb-2">
                 <h2>Outdoor Living</h2>
-                <p>A huge wrap-around deck surrounds the upper level, offering space for dining, lounging, and hammocking.</p>
+                <p>The upper level is surrounded with a huge, wrap-around deck. There’s enough space for outdoor dining and lounging.</p>
             </div>
 
             <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
-                    <img src="images/horizons/horizon 14.jpg" alt="Hammock">
-                    <img src="images/horizons/horizon 15.jpg" alt="Lower Deck">
-                    <img src="images/horizons/horizon 16.jpg" alt="Upper Deck">
-                    <img src="images/horizons/horizon 17.jpg" alt="Deck View">
-                    <img src="images/horizons/horizon 18.jpg" alt="Deck Seating">
-                    <img src="images/horizons/horizon 19.jpg" alt="Deck Dining">
-                    <img src="images/horizons/horizon 20.jpg" alt="Wrap Around Deck">
+                    <img src="images/horizons/horizon 14.jpg" alt="Hammock on deck">
+                    <img src="images/horizons/horizon 15.jpg" alt="Lower deck view">
+                    <img src="images/horizons/horizon 16.jpg" alt="Upper deck view">
+                    <img src="images/horizons/horizon 17.jpg" alt="Deck seating">
+                    <img src="images/horizons/horizon 18.jpg" alt="Deck seating angle">
+                    <img src="images/horizons/horizon 19.jpg" alt="Outdoor dining">
+                    <img src="images/horizons/horizon 20.jpg" alt="Wrap around deck">
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
@@ -137,20 +140,20 @@
     <section class="bg-offwhite padding-block">
         <div class="container">
             <div class="centered-text mb-2">
-                <h2>The Views & Surroundings</h2>
-                <p>Eastern exposure allows for beautiful sunrises and cool, shaded afternoons. The cottage is private, quiet, and located on a paved road.</p>
+                <h2>Privacy & Views</h2>
+                <p>The eastern exposure allows for cool, shaded afternoons and beautiful sunrises. The cottage is located near the end of a quiet, private, paved road.</p>
             </div>
 
             <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
-                    <img src="images/horizons/horizon 21.jpg" alt="Island Glow">
+                    <img src="images/horizons/horizon 21.jpg" alt="Island glow">
                     <img src="images/horizons/horizon 22.jpg" alt="Sunset">
-                    <img src="images/horizons/horizon 23.jpg" alt="View">
-                    <img src="images/horizons/horizon 24.jpg" alt="View 2">
-                    <img src="images/horizons/horizon 25.jpg" alt="Trees Privacy">
-                    <img src="images/horizons/horizon 26.jpg" alt="Paved Driveway">
-                    <img src="images/horizons/horizon 27.jpg" alt="Parking">
+                    <img src="images/horizons/horizon 23.jpg" alt="Ocean view">
+                    <img src="images/horizons/horizon 24.jpg" alt="Ocean view 2">
+                    <img src="images/horizons/horizon 25.jpg" alt="Privacy trees">
+                    <img src="images/horizons/horizon 26.jpg" alt="Paved driveway">
+                    <img src="images/horizons/horizon 27.jpg" alt="Parking area">
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
@@ -162,24 +165,22 @@
             <h2 class="text-white centered-text">Amenities</h2>
             <div class="amenities-grid">
                 <ul>
-                    <li>2 Bedrooms, sleeps 4 (1 King, 2 Twins/King)</li>
-                    <li>3 Bathrooms (2 ensuite, 1 half-bath)</li>
-                    <li>High speed Starlink internet/wi-fi with battery back-up</li>
-                    <li>Filtered, UV-treated, potable water</li>
-                    <li>High quality linens and towels</li>
-                    <li>Easy, accessible parking (Paved Road)</li>
-                    <li>Smoke detectors & fire extinguishers</li>
-                    <li>Exterior safety lighting</li>
+                    <li>2 Bedrooms, sleeps 4: 1 king, 2 twins (convertible to king).</li>
+                    <li>3 Bathrooms: 1/2 bath upstairs, 2 ensuite with screened showers.</li>
+                    <li>High speed Starlink internet/wi-fi with battery back-up.</li>
+                    <li>High quality linens and towels.</li>
+                    <li>Filtered, UV-treated, potable water.</li>
+                    <li>Easy, accessible parking for two vehicles (Paved road).</li>
+                    <li>Smoke detectors, fire extinguishers, exterior safety lighting.</li>
                 </ul>
                 <ul>
-                    <li>Fully equipped kitchen with Granite countertops</li>
-                    <li>Dishwasher, oven, stove, microwave, blender</li>
-                    <li>Refrigerator with ice maker</li>
-                    <li>Outdoor gas grill</li>
-                    <li>Samsung Frame TV & Assortment of books</li>
-                    <li>Beach chairs, beach towels, and cooler</li>
-                    <li>Dining table for 4 & Couches for 5</li>
-                    <li>Nearby: Snorkeling, Hiking, Restaurants (10 mins)</li>
+                    <li>Fully equipped kitchen: Granite countertops, dishwasher, oven, stove.</li>
+                    <li>Microwave, toaster oven, refrigerator with ice maker.</li>
+                    <li>Outdoor gas grill.</li>
+                    <li>Dining table for 4 & Couches for 5.</li>
+                    <li>Samsung Frame TV & Assortment of books.</li>
+                    <li>Beach chairs, beach towels, and cooler.</li>
+                    <li>Nearby: Snorkeling, Hiking, Restaurants (10 mins).</li>
                 </ul>
             </div>
         </div>
@@ -212,15 +213,9 @@
 
     <script>
         function scrollGallery(button, direction) {
-            // Find the gallery associated with the clicked button
             const container = button.parentElement;
             const gallery = container.querySelector('.swipe-gallery');
-            
-            // Determine scroll amount (width of one image)
-            // We use 320 to roughly match the image width + gap
             const scrollAmount = 350; 
-            
-            // Simple arithmetic scroll (Robust method)
             gallery.scrollLeft += (scrollAmount * direction);
         }
     </script>
