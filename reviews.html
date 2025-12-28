@@ -21,7 +21,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-top: 3px solid transparent; /* default */
+            border-top: 3px solid transparent; 
         }
         /* Subtle accent border at top of card based on property */
         .card-sugarbird { border-top-color: #d35400; }
@@ -73,6 +73,29 @@
             gap: 2rem;
             margin-top: 2rem;
         }
+
+        /* Styles for the Platform Links Section */
+        .platform-links-container {
+            background-color: var(--bg-offwhite);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            border: 1px solid #eee;
+        }
+        .platform-group {
+            display: inline-block;
+            margin: 0 15px;
+        }
+        .platform-link {
+            color: var(--primary-color);
+            text-decoration: underline;
+            font-weight: bold;
+            margin: 0 5px;
+            transition: 0.3s;
+        }
+        .platform-link:hover {
+            color: #d35400; /* Orange hover effect */
+        }
     </style>
 </head>
 <body>
@@ -81,12 +104,12 @@
         <div class="container nav-flex">
             <a href="index.html" class="logo">Horizons USVI</a>
             <ul class="nav-links">
-                <li><a href="horizons.html">Horizons Cottage</a></li>
-                <li><a href="sugar-bird.html">Sugar Bird Cottage</a></li>
-                <li><a href="reviews.html" class="active">Reviews</a></li>
-                <li><a href="views.html">The Views</a></li>
-                <li><a href="rates.html">Rates & Calendar</a></li>
-                <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
+                <li><a href="horizons.html">HORIZONS</a></li>
+                <li><a href="sugar-bird.html">SUGAR BIRD</a></li>
+                <li><a href="reviews.html" class="active">REVIEWS</a></li>
+                <li><a href="views.html">THE VIEWS</a></li>
+                <li><a href="rates.html">RATES & CALENDAR</a></li>
+                <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
             </ul>
             <div class="hamburger">☰</div>
         </div>
@@ -96,6 +119,23 @@
         <div class="container">
             <h1>Guest Reviews</h1>
             <p class="subtitle">Verified experiences from our guests over the years.</p>
+            
+            <div class="platform-links-container">
+                <p style="margin-bottom: 0.5rem;">View our listings and reviews directly on booking platforms:</p>
+                
+                <div class="platform-group">
+                    <strong>Airbnb:</strong>
+                    <a href="https://www.airbnb.com/rooms/54245710?source_impression_id=p3_1766888379_P3czehWyW0rgJJgo" target="_blank" class="platform-link">Horizons</a> | 
+                    <a href="https://www.airbnb.com/rooms/1075563030397925585?source_impression_id=p3_1766888420_P3--B5UuK6QK07mD" target="_blank" class="platform-link">Sugar Bird</a>
+                </div>
+
+                <div class="platform-group">
+                    <strong>VRBO:</strong>
+                    <a href="https://www.vrbo.com/2578721" target="_blank" class="platform-link">Horizons</a> | 
+                    <a href="https://www.vrbo.com/2615917" target="_blank" class="platform-link">Sugar Bird</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -705,6 +745,25 @@
         </div>
     </section>
 
+    <section class="bg-offwhite padding-block">
+        <div class="container">
+            <div class="centered-text mb-2">
+                <h2>Verified Listings</h2>
+                <p>Read more reviews directly on our booking platforms.</p>
+            </div>
+
+            <div class="widget-container" style="text-align: center;">
+                <div class="hero-buttons mt-2" style="justify-content: center; flex-wrap: wrap; gap: 1rem;">
+                    <a href="https://www.airbnb.com/rooms/54245710?source_impression_id=p3_1766888379_P3czehWyW0rgJJgo" target="_blank" class="btn btn-primary" style="background-color: #ff5a5f;">Airbnb Horizons</a>
+                    <a href="https://www.airbnb.com/rooms/1075563030397925585?source_impression_id=p3_1766888420_P3--B5UuK6QK07mD" target="_blank" class="btn btn-primary" style="background-color: #ff5a5f;">Airbnb Sugar Bird</a>
+                    
+                    <a href="https://www.vrbo.com/2578721" target="_blank" class="btn btn-outline" style="border-color: #002463; color: #002463;">VRBO Horizons</a>
+                    <a href="https://www.vrbo.com/2615917" target="_blank" class="btn btn-outline" style="border-color: #002463; color: #002463;">VRBO Sugar Bird</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container footer-content">
             <div class="footer-col">
@@ -714,6 +773,9 @@
             </div>
             <div class="footer-col">
                 <p>&copy; 2025 Horizons & Sugar Bird Cottages</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    <a href="reviews.html" style="text-decoration: underline;">Read Guest Reviews</a>
+                </p>
             </div>
         </div>
     </footer>
