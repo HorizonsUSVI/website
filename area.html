@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Area | Horizons & Sugar Bird Cottages</title>
+    <meta name="description" content="Explore St. John: Best beaches, hiking trails, ruins, and dining near Horizons and Sugar Bird Cottages.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* INTERNAL STYLES FOR AREA PAGE */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; color: #333; line-height: 1.6; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: #2c3e50; }
+        
+        /* Layout & Grid */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .area-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .area-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 20px 0; }
+        
+        /* Flex Layout for Getting Here */
+        .flex-row { display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; margin: 20px 0; }
+        .flex-text { flex: 3; min-width: 300px; }
+        .flex-img { flex: 2; min-width: 250px; }
+
+        /* Images */
+        img { max-width: 100%; height: auto; display: block; border-radius: 2px; }
+        .full-width-banner { width: 100%; height: auto; display: block; max-height: 600px; object-fit: cover; }
+        
+        /* Figures & Captions */
+        figure { margin: 0; }
+        figcaption { font-size: 0.9rem; color: #666; font-style: italic; margin-top: 8px; text-align: center; }
+
+        /* Sections & Spacing */
+        .section-block { padding: 40px 0; border-bottom: 1px solid #eee; scroll-margin-top: 80px; }
+        .section-block:last-child { border-bottom: none; }
+        
+        /* Jump Links - Updated to be Blue & Underlined on Hover */
+        .jump-links a { color: #2980b9; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s; }
+        .jump-links a:hover { border-bottom: 1px solid #2980b9; }
+
+        /* External Links Styling */
+        .links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .links-column h3 { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 15px; }
+        .links-column ul { list-style: none; padding-left: 0; }
+        .links-column li { margin-bottom: 8px; }
+        /* Link colors */
+        .links-column a, .flex-text a { color: #2980b9; text-decoration: none; transition: color 0.2s; }
+        .links-column a:hover, .flex-text a:hover { text-decoration: underline; color: #1c5980; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .area-grid-2, .area-grid-3, .links-grid { grid-template-columns: 1fr; }
+            .flex-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar solid-nav">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Horizons USVI</a>
+            <ul class="nav-links">
+                <li><a href="horizons.html">HORIZONS</a></li>
+                <li><a href="sugar-bird.html">SUGAR BIRD</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="views.html">THE VIEWS</a></li>
+                <li><a href="area.html" class="active">THE AREA</a></li> 
+                <li><a href="rates.html">RATES & CALENDAR</a></li>
+                <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <div>
+        <img src="images/area/area-01.jpg" alt="Yawzi Point St. John" class="full-width-banner">
+    </div>
+
+    <div class="container">
+        
+        <div class="section-block" style="text-align: center;">
+            <h1 style="margin-bottom: 1rem;">You're going to LOVE St. John</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Here are a few things to help you plan your trip</p>
+            <p class="jump-links">
+                <strong>
+                    <a href="#places">Places Nearby</a> – 
+                    <a href="#more-to-do">More to do on St. John</a> – 
+                    <a href="#links">Links</a> – 
+                    <a href="#getting-here">Getting Here</a>
+                </strong>
+            </p>
+        </div>
+
+        <div class="section-block" id="places">
+            <h2>Places Nearby</h2>
+            <p>We think our spot on the island is the best! It's quiet and close to the most secluded beaches on the island, but less than 10 minutes to Coral Bay and only 20 minutes to the North shore beaches. And we're right on the steps of the National Park, with great hiking trails.</p>
+            <p>Only a half-mile drive (or a 3/4 mile walk along a beautiful trail) is Salt Pond Beach. Salt Pond Beach is a great, sandy beach for snorkeling or swimming. Plenty of sunshine so keep the sunblock nearby! This is also the starting point to the Ram Head (awesome sunsets) and Drunk Bay trails.</p>
+
+            <div class="area-grid-2">
+                <figure>
+                    <img src="images/area/area-02.jpg" alt="Salt Pond Beach">
+                    <figcaption>Salt Pond Beach</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/area/area-03.jpg" alt="View from Ram Head">
+                    <figcaption>View from Ram Head towards Blue Cobblestone Beach</figcaption>
+                </figure>
+            </div>
+
+            <figure style="margin-top: 20px;">
+                <img src="images/area/area-04.jpg" alt="Ram Head Panoramic">
+                <figcaption>Ram Head Panoramic</figcaption>
+            </figure>
+
+            <p style="margin-top: 30px;">A short drive further brings you into the National Park to Great Lameshur and Little Lameshur bays. Yawzi point (pictured in the banner at the top) separates the two bays. These are great bays for snorkeling and are almost never crowded. Great Lameshur is a cobble beach, Little Lameshur is sandy. The road into the National Park is a bit bouncy, so a jeep is recommended.</p>
+
+            <div class="area-grid-2">
+                <figure>
+                    <img src="images/area/area-05.jpg" alt="Great Lameshur Bay">
+                    <figcaption>Great Lameshur Bay</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/area/area-07.jpg" alt="Little Lameshur Bay">
+                    <figcaption>Little Lameshur Bay</figcaption>
+                </figure>
+            </div>
+
+            <figure style="margin-top: 20px;">
+                <img src="images/area/area-06.jpg" alt="Great Lameshur Bay Panoramic">
+                <figcaption>Great Lameshur Bay Panoramic</figcaption>
+            </figure>
+
+            <p style="margin-top: 30px;">At the end of road, just past Little Lameshur, are ruins and trails that lead deeper into the National Park. You can connect all the way to the Reef Bay trail if you have the energy!</p>
+
+            <figure>
+                <img src="images/area/area-08.jpg" alt="Little Lameshur Bay and Ruins">
+                <figcaption>Little Lameshur Bay and Ruins</figcaption>
+            </figure>
+        </div>
+
+        <div class="section-block" id="more-to-do">
+            <h2>More to do on St. John</h2>
+            
+            <div class="area-grid-3">
+                <div>
+                    <figure style="margin-bottom: 20px;">
+                        <img src="images/area/area-09.jpg" alt="North Shore Beaches">
+                        <figcaption>North Shore Beaches (20 min drive)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/area/area-12.jpg" alt="View from Peace Hill">
+                        <figcaption>View from the Peace Hill windmill window</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure style="margin-bottom: 20px;">
+                        <img src="images/area/area-10.jpg" alt="Annaberg Ruins">
+                        <figcaption>Annaberg sugar plantation ruins</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/area/area-13.jpg" alt="Cinnamon Bay Ruins">
+                        <figcaption>Some of the Cinnamon Bay ruins</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure style="margin-bottom: 20px;">
+                        <img src="images/area/area-11.jpg" alt="Peace Hill windmill">
+                        <figcaption>Peace Hill windmill</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/area/area-14.jpg" alt="Donkeys">
+                        <figcaption>and the Donkeys are EVERYWHERE!</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block" id="links">
+            <h2>Links</h2>
+            <div class="links-grid">
+                <div class="links-column">
+                    <h3>Guide Books and Maps</h3>
+                    <p><a href="https://www.amazon.com/dp/0999078658" target="_blank" rel="noopener noreferrer">St. John Off the Beaten Track</a> - Our recommended St. John guidebook</p>
+                    <p><a href="http://trailbandit.org/" target="_blank" rel="noopener noreferrer">Trail Bandit (Map)</a> - Free printable map with hiking trails (or pay a small fee for a water and tear resistant map)</p>
+                    <p><a href="https://stjohnisland.com/st-john-hiking/" target="_blank">Hiking Maps & Info</a> - Hiking trail details</p>
+
+                    <h3 style="margin-top: 30px;">Car Rentals</h3>
+                    <ul>
+                        <li><a href="https://www.cccarrental.com/" target="_blank">C & C</a> or call (340) 693-8164</li>
+                        <li><a href="http://coolbreezecarrental.com/" target="_blank">Cool Breeze Jeep & Car Rental</a> or call (340) 776-6588</li>
+                        <li><a href="https://courtesycarrental.com/" target="_blank">Courtesy</a> or call (340) 776-6650</li>
+                        <li>Denzil Clyne Car Rental: (340) 776-6715</li>
+                        <li><a href="https://www.bookajeep.com/" target="_blank">L&L Jeep Rental</a> or call (340) 776-1120</li>
+                        <li><a href="https://mrpipersjeeps.com/" target="_blank">Mr Pipers Jeeps</a> or call (340) 693-7580</li>
+                        <li><a href="https://www.oconnorcarrental.com/" target="_blank">O'Connor</a> or call (340) 776-6343</li>
+                        <li><a href="https://www.stjohncarrental.com/" target="_blank">St John Car Rental</a> or call (340) 776-6103</li>
+                        <li><a href="https://www.sunshinesjeeprental.com/" target="_blank">Sunshine's Jeep Rental</a> or call (340) 690-1786</li>
+                    </ul>
+                    <p><em>Most close around 5 pm so take this into consideration when making travel plans.</em></p>
+                </div>
+
+                <div class="links-column">
+                    <h3>Activities & Dining</h3>
+                    <p><strong>Sea:</strong><br>
+                    <a href="https://www.vinow.com/travel/virgin-islands-ferry-schedules/" target="_blank">Ferry Schedules</a><br>
+                    <a href="https://www.divelowkey.com/" target="_blank">Low Key Watersports</a><br>
+                    <a href="https://www.arawakexp.com/" target="_blank">Arawak Expeditions</a><br>
+                    <a href="https://www.visnuba.com/" target="_blank">Snuba</a></p>
+                
+                
+                
+                    <p><strong>Nearby Dining:</strong><br>
+                    <a href="https://misslucysrestaurant.com/" target="_blank">Miss Lucy's</a> (340) 693-5244<br>
+                    <a href="https://www.lovecitycafe.com/" target="_blank">Love City Cafe</a> (340) 642-4786<br>
+                    <a href="http://www.skinnylegsvi.com/" target="_blank">Skinny Legs</a> (340) 779-4982<br>
+                    <a href="https://limeoutvi.com/" target="_blank">Lime Out</a>, a Floating Taco Bar! (340) 643-5333</p>
+                    
+                    <h3 style="margin-top: 30px;">Shopping & More Sites</h3>
+                    <p><a href="https://mongoosejunctionstjohn.com/" target="_blank">Mongoose Junction</a></p>
+                    <p><a href="https://stjohnspice.com/" target="_blank">St. John Spice Co.</a></p>
+                    <p><a href="https://www.nps.gov/viis/learn/historyculture/annaberg-plantation.htm" target="_blank">Annaberg Ruins</a></p>
+                    <p><a href="https://www.visitstjohn.com/" target="_blank">Visitstjohn.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block" id="getting-here">
+            <h2>Getting Here</h2>
+            <div class="flex-row">
+                <div class="flex-text">
+                    <p>After you've arrived at the St. Thomas airport (STT), you can hire a taxi to take you to the passenger ferry dock at Red Hook. From there you will take the ferry over to St. John.</p>
+                    <p>Remember, we drive on the <strong>LEFT</strong> side of the road. The roads are steep, narrow, and windy.</p>
+                    <p>From Cruz Bay, take Route 10 (Centerline Road) to Coral Bay. Turn right onto Route 107 when you see the “Welcome to Coral Bay” signs.</p>
+                    <p>Follow Route 107 south past Calabash Market and Miss Lucy's. Look for "Sugar Bird Hill" on the left. Turn left and bear left up the concrete road.</p>
+                    <p><strong><a href="horizons.html">Horizons Cottage:</a></strong> Blue roof on the left.<br>
+                    <strong><a href="sugar-bird.html">Sugar Bird Cottage:</a></strong> A little beyond Horizons on the left.</p>
+                </div>
+                <div class="flex-img">
+                    <figure>
+                        <img src="images/area/area-15.jpg" alt="Driveway to Cottages">
+                        <figcaption>Driveway to Cottages. Horizons is the blue roof on the left.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Horizons & Sugar Bird</h4>
+                <p>Coral Bay, St. John, US Virgin Islands</p>
+                <a href="mailto:horizonsusvi@gmail.com">HorizonsUSVI@gmail.com</a>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2025 Horizons & Sugar Bird Cottages</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    <a href="reviews.html" style="text-decoration: underline;">Read Guest Reviews</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -5,13 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horizons & Sugar Bird Cottages | St. John, USVI</title>
     <meta name="description" content="Private vacation rental cottages in Coral Bay, St. John USVI with panoramic ocean views.">
-    <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style.css">
+
     <style>
+        /* INTERNAL STYLES FOR HOME PAGE */
+        body, html { height: 100%; margin: 0; font-family: 'Lato', sans-serif; color: #333; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* HERO SECTION STYLES */
+        .hero {
+            /* Default Image (Desktop) */
+            background-image: url('images/hero-view.jpg'); 
+            height: 90vh; /* Takes up 90% of screen height */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            
+            /* Flexbox to center the content */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        /* Overlay to ensure text readability */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+        }
+
+        /* Content wrapper to sit above overlay */
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* Button Styles */
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background-color: #2980b9;
+            color: white;
+            border: 2px solid #2980b9;
+        }
+        .btn-primary:hover { background-color: #1c5980; border-color: #1c5980; }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-outline:hover { background-color: white; color: #333; }
+
+
+        /* MOBILE ADJUSTMENTS (Photo Swap & Text Size) */
+        @media (max-width: 768px) {
+            .hero {
+                /* Switch to vertical photo on mobile */
+                background-image: url('images/hero-view2.jpg');
+            }
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .hero-buttons { flex-direction: column; gap: 15px; }
+        }
+
+
+        /* REST OF PAGE STYLES */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .intro { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
+        .intro h2 { color: #2c3e50; margin-bottom: 20px; }
+        .intro p { font-size: 1.1rem; color: #555; }
+
+        .cottages-section { background-color: #f9f9f9; padding: 60px 0; }
+        
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .card-text { padding: 30px; }
+        .card-text h3 { margin-top: 0; color: #2c3e50; }
+        .text-link { color: #2980b9; text-decoration: none; font-weight: bold; }
+        
+        .media-section { padding: 60px 0; }
+        .media-block { margin-bottom: 40px; text-align: center; }
+        .caption { font-style: italic; color: #666; margin-top: 10px; }
+
+        /* Video Container from your original code */
         .video-container {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -22,17 +150,17 @@
         }
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+            top: 0; left: 0; width: 100%; height: 100%; border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar solid-nav">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Horizons USVI</a>
             <ul class="nav-links">
@@ -40,6 +168,7 @@
                 <li><a href="sugar-bird.html">SUGAR BIRD</a></li>
                 <li><a href="reviews.html">REVIEWS</a></li>
                 <li><a href="views.html">THE VIEWS</a></li>
+                <li><a href="area.html">THE AREA</a></li> 
                 <li><a href="rates.html">RATES & CALENDAR</a></li>
                 <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
             </ul>
@@ -68,7 +197,9 @@
             <div class="grid-2">
                 
                 <div class="card">
-                    <img src="images/home-page/Horizon 02.jpg" alt="Horizons Cottage" style="width:100%; height:300px; object-fit:cover; display:block;">
+                    <a href="horizons.html">
+                        <img src="images/home-page/horizons.jpg" alt="Horizons Cottage" style="width:100%; height:300px; object-fit:cover; display:block;">
+                    </a>
                     <div class="card-text">
                         <h3>Horizons Cottage</h3>
                         <p>A 2-bedroom, 2.5-bath open-concept villa with a large wrap-around deck. Perfect for families or couples seeking space.</p>
@@ -77,7 +208,9 @@
                 </div>
 
                 <div class="card">
-                    <img src="images/home-page/01 Cover.jpg" alt="Sugar Bird Cottage" style="width:100%; height:300px; object-fit:cover; display:block;">
+                    <a href="sugar-bird.html">
+                        <img src="images/home-page/sugarbird.jpg" alt="Sugar Bird Cottage" style="width:100%; height:300px; object-fit:cover; display:block;">
+                    </a>
                     <div class="card-text">
                         <h3>Sugar Bird Cottage</h3>
                         <p>A romantic 1-bedroom, 1.5-bath bungalow with three decks. Ideal for honeymooners or solo adventurers.</p>
@@ -99,7 +232,7 @@
             </div>
 
             <div class="media-block">
-                <img src="images/home-page/Horizons and Sugar Bird Cottages.jpg" alt="Panoramic view from Sugar Bird Cottage" class="feature-img">
+                <img src="images/home-page/both-cottages.jpg" alt="Panoramic view from Sugar Bird Cottage" style="width:100%; height:auto; display:block; border-radius:4px; box-shadow:0 5px 15px rgba(0,0,0,0.1);">
                 <p class="caption">These neighboring cottages are completely private, but close enough to walk between the two if you wish to rent both.</p>
             </div>
 

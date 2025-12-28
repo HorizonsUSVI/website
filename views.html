@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Views | Horizons & Sugar Bird Cottages</title>
+    <meta name="description" content="Spectacular panoramic views of the Caribbean Sea, British Virgin Islands, and Coral Bay from our St. John cottages.">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* The Parallax Container */
+        .parallax-window {
+            min-height: 500px; /* How tall the 'window' is */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
+
+        /* Specific Images for the Parallax Windows */
+        /* Parallax 1 is Image 03 */
+        .parallax-1 { background-image: url('images/views/03-view.jpg'); }
+        
+        /* Parallax 2 is Image 04 */
+        .parallax-2 { background-image: url('images/views/04-view.jpg'); }
+
+        /* Mobile Fix: Parallax can be glitchy on phones, so we turn it off for small screens */
+        @media (max-width: 768px) {
+            .parallax-window {
+                background-attachment: scroll;
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar solid-nav">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Horizons USVI</a>
+            <ul class="nav-links">
+                <li><a href="horizons.html">HORIZONS</a></li>
+                <li><a href="sugar-bird.html">SUGAR BIRD</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="views.html" class="active">THE VIEWS</a></li>
+                <li><a href="area.html">THE AREA</a></li> <li><a href="rates.html">RATES & CALENDAR</a></li>
+                <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>The Views</h1>
+            <p class="subtitle">Wake up to the sunrise over the British Virgin Islands.</p>
+        </div>
+    </header>
+
+    <section class="container content-spacing">
+        <div class="media-block">
+            <img src="images/views/01-view.jpg" alt="Panoramic View from Deck" class="hero-img shadow">
+            <p class="caption">This is not a drone photo – I took this from an iPhone in panoramic mode from the deck at Sugar Bird Cottage. Horizons Cottage has a slightly higher vantage point. The views are truly spectacular!</p>
+        </div>
+    </section>
+
+    <div class="parallax-window parallax-1"></div>
+
+    <section class="bg-offwhite padding-block">
+        <div class="container">
+            <img src="images/views/02-view.jpg" alt="Caribbean Scenery" class="hero-img shadow">
+        </div>
+    </section>
+
+    <div class="parallax-window parallax-2"></div>
+
+    <section class="container padding-block centered-text">
+        <div class="container">
+            <h2 style="margin-bottom: 0.3rem;">Come See It For Yourself</h2>
+            <p>Pictures can't capture the sound of the ocean.....</p>
+            <div class="mt-4">
+                <a href="rates.html" class="btn btn-primary">Check Availability</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Horizons & Sugar Bird</h4>
+                <p>Coral Bay, St. John, US Virgin Islands</p>
+                <a href="mailto:horizonsusvi@gmail.com">HorizonsUSVI@gmail.com</a>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2025 Horizons & Sugar Bird Cottages</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    <a href="reviews.html" style="text-decoration: underline;">Read Guest Reviews</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
