@@ -12,8 +12,146 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        .gallery-container { position: relative; }
-        .nav-btn { z-index: 999; cursor: pointer; }
+        /* --- GALLERY STYLES --- */
+        .gallery-container { 
+            position: relative; 
+            display: flex;
+            align-items: center;
+        }
+        
+        .swipe-gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 10px;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
+            -ms-overflow-style: none;  /* Hide scrollbar IE 10+ */
+            width: 100%;
+        }
+        
+        .swipe-gallery::-webkit-scrollbar { 
+            display: none; /* Hide scrollbar Chrome/Safari */
+        }
+
+        .swipe-gallery img {
+            height: 400px; /* Fixed height */
+            width: auto;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .nav-btn { 
+            z-index: 10; 
+            cursor: pointer; 
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* --- NAVIGATION STYLES --- */
+        .navbar {
+            padding: 15px 0;
+            position: relative; 
+            z-index: 1000;
+        }
+        
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            font-weight: bold;
+            white-space: nowrap; 
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff; /* White Text */
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            white-space: nowrap; /* Prevents Wrapping */
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #ccc; 
+        }
+
+        .btn-nav {
+            background-color: #2980b9;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid white; 
+        }
+        
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #fff; /* White Icon */
+        }
+
+        /* --- MOBILE ADJUSTMENTS (900px Breakpoint) --- */
+        @media (max-width: 900px) { 
+            /* Gallery Fix */
+            .swipe-gallery img { height: 250px; }
+
+            /* Hamburger Logic */
+            .hamburger { display: block; }
+
+            .nav-links {
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%; 
+                left: 0;
+                width: 100%;
+                /* Blue Background for dropdown so white text pops */
+                background-color: #2980b9; 
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { display: flex; }
+
+            .nav-links li { text-align: center; margin: 10px 0; }
+            
+            /* Text stays white, allow wrapping on mobile if needed */
+            .nav-links a { 
+                white-space: normal; 
+                color: #fff; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -21,7 +159,8 @@
     <nav class="navbar solid-nav">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Horizons USVI</a>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="navLinks">
                 <li><a href="horizons.html" class="active">HORIZONS</a></li>
                 <li><a href="sugar-bird.html">SUGAR BIRD</a></li>
                 <li><a href="reviews.html">REVIEWS</a></li>
@@ -30,7 +169,8 @@
                 <li><a href="rates.html">RATES & CALENDAR</a></li>
                 <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
             </ul>
-            <div class="hamburger">☰</div>
+            
+            <div class="hamburger" id="hamburger">☰</div>
         </div>
     </nav>
 
@@ -215,11 +355,22 @@
     </footer>
 
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Scroll Gallery Logic
         function scrollGallery(button, direction) {
             const container = button.parentElement;
             const gallery = container.querySelector('.swipe-gallery');
             const scrollAmount = 350; 
             gallery.scrollLeft += (scrollAmount * direction);
+        }
+
+        // Mobile Menu Logic
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
         }
     </script>
 </body>

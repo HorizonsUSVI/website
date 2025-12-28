@@ -12,8 +12,146 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
-        .gallery-container { position: relative; }
-        .nav-btn { z-index: 999; cursor: pointer; }
+        /* --- GALLERY STYLES --- */
+        .gallery-container { 
+            position: relative; 
+            display: flex;
+            align-items: center;
+        }
+        
+        .swipe-gallery {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 10px;
+            scrollbar-width: none; /* Hide scrollbar Firefox */
+            -ms-overflow-style: none;  /* Hide scrollbar IE 10+ */
+            width: 100%;
+        }
+        
+        .swipe-gallery::-webkit-scrollbar { 
+            display: none; /* Hide scrollbar Chrome/Safari */
+        }
+
+        .swipe-gallery img {
+            height: 400px; /* Fixed height */
+            width: auto;
+            max-width: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .nav-btn { 
+            z-index: 10; 
+            cursor: pointer; 
+            background: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        /* --- NAVIGATION STYLES --- */
+        .navbar {
+            padding: 15px 0;
+            position: relative; 
+            z-index: 1000;
+        }
+        
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            font-weight: bold;
+            white-space: nowrap; 
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff; /* White Text */
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            white-space: nowrap; /* Prevents Wrapping */
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #ccc; 
+        }
+
+        .btn-nav {
+            background-color: #2980b9;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid white; 
+        }
+        
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #fff; /* White Icon */
+        }
+
+        /* --- MOBILE ADJUSTMENTS (900px Breakpoint) --- */
+        @media (max-width: 900px) { 
+            /* Gallery Fix */
+            .swipe-gallery img { height: 250px; }
+
+            /* Hamburger Logic */
+            .hamburger { display: block; }
+
+            .nav-links {
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%; 
+                left: 0;
+                width: 100%;
+                /* Blue Background for dropdown so white text pops */
+                background-color: #2980b9; 
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { display: flex; }
+
+            .nav-links li { text-align: center; margin: 10px 0; }
+            
+            /* Text stays white, allow wrapping on mobile if needed */
+            .nav-links a { 
+                white-space: normal; 
+                color: #fff; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -21,15 +159,18 @@
     <nav class="navbar solid-nav">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Horizons USVI</a>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="navLinks">
                 <li><a href="horizons.html">HORIZONS</a></li>
                 <li><a href="sugar-bird.html" class="active">SUGAR BIRD</a></li>
                 <li><a href="reviews.html">REVIEWS</a></li>
                 <li><a href="views.html">THE VIEWS</a></li>
+                <li><a href="area.html">THE AREA</a></li> 
                 <li><a href="rates.html">RATES & CALENDAR</a></li>
                 <li><a href="contact.html" class="btn-nav">CONTACT</a></li>
             </ul>
-            <div class="hamburger">☰</div>
+            
+            <div class="hamburger" id="hamburger">☰</div>
         </div>
     </nav>
 
@@ -90,7 +231,7 @@
                     <img src="images/sugarbird/sugarbird 11.jpg" alt="Kitchen Detail">
                     <img src="images/sugarbird/sugarbird 12.jpg" alt="Indoor Dining">
                     <img src="images/sugarbird/sugarbird 13.jpg" alt="Half Bath">
-                    <img src="images/sugarbird/sugarbird 14.jpg" alt="Living Area Detail">
+                    <img src="images/sugarbird/sugarbird 14.jpg" alt="Living Area Detail" style="object-fit: contain; background-color: #f9f9f9;">
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
@@ -153,29 +294,31 @@
             <h2 class="text-white centered-text">Amenities</h2>
             <div class="amenities-grid">
                 <ul>
-                    <li>1 Bedroom, sleeps 2 (King bed) with A/C</li>
-                    <li>2 Bathrooms (1 ensuite with view, 1 half-bath)</li>
+                    <li>1 Bedroom, sleeps 2 (King bed) with A/C in bedroom</li>
+                    <li>2 Bathrooms (1 half-bath upstairs and 1 ensuite bathroom with screened, private, ocean-view shower</li>
                     <li>Private outdoor shower</li>
                     <li>High speed internet/wi-fi</li>
                     <li>High quality linens and towels</li>
-                    <li>Filtered, UV-treated, potable water</li>
+                    
                     <li>Parking for one vehicle (Paved road)</li>
+                    <li>Smoke detectors, fire extinguishers</li>
                 </ul>
                 <ul>
-                    <li>Full kitchen: Stove, oven, fridge with ice maker</li>
+                    <li>Kitchen: Stove, oven, full-size fridge with ice maker</li>
                     <li>Microwave, toaster oven, blender, coffee maker</li>
+                    <li>Filtered, UV-treated, potable water</li>
                     <li>Outdoor gas grill</li>
                     <li>Smart TV, stereo, books & CDs</li>
-                    <li>Beach chairs, towels, cooler, snorkel gear</li>
-                    <li>Smoke detectors, fire extinguishers</li>
-                    <li>Note: Steps required for access</li>
+                    <li>Beach chairs, towels, cooler</li>
+                    
+                    <li>Nearby: Restaurants, Grocery Stores, Snorkeling, Hiking, Scuba Diving, Sailing, Bird Watching, Fishing, Kayaking, SUP, or just lounging at the beach and relaxing....</li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section class="container padding-block centered-text">
-        <p class="large-text">Sugar Bird is a peaceful getaway – surrounded by nature, the sound of the ocean below, and expansive views. We invite you to spend a private, unforgettable vacation at our cottage!</p>
+        <p class="large-text">Sugar Bird is a peaceful getaway – surrounded by nature, the sound of the ocean below, and expansive views of the Caribbean and surrounding islands. We invite you to spend an unforgettable vacation at our cottage!</p>
 
         <img src="images/sugarbird/sugarbird 08.jpg" alt="BVI View from Sugar Bird" class="hero-img shadow mt-4">
 
@@ -206,11 +349,22 @@
     </footer>
 
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Scroll Gallery Logic
         function scrollGallery(button, direction) {
             const container = button.parentElement;
             const gallery = container.querySelector('.swipe-gallery');
             const scrollAmount = 350; 
             gallery.scrollLeft += (scrollAmount * direction);
+        }
+
+        // Mobile Menu Logic
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
         }
     </script>
 </body>

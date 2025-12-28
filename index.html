@@ -17,36 +17,91 @@
         body, html { height: 100%; margin: 0; font-family: 'Lato', sans-serif; color: #333; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
+        /* --- NAVIGATION STYLES --- */
+        .navbar {
+            padding: 15px 0;
+            position: relative; 
+            z-index: 1000;
+            /* Removed background color to allow transparency if desired */
+        }
+        
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff; /* White Text */
+            font-weight: bold;
+            white-space: nowrap; 
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff; /* White Text */
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            white-space: nowrap; 
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #ccc; 
+        }
+
+        .btn-nav {
+            background-color: #2980b9;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 4px;
+            border: 1px solid white; /* Added border so it pops on blue background */
+        }
+        
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #fff; /* White Icon */
+        }
+
         /* HERO SECTION STYLES */
         .hero {
-            /* Default Image (Desktop) */
             background-image: url('images/hero-view.jpg'); 
             height: 90vh; 
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             position: relative;
-            
-            /* Flexbox Alignment - Top Center (Putting text in the sky) */
             display: flex;
             align-items: flex-start; 
             justify-content: center; 
-            padding-top: 15vh; /* Push down slightly from the very top */
+            padding-top: 15vh; 
             box-sizing: border-box; 
-            
             text-align: center;
             color: #fff;
         }
 
-        /* Overlay */
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.2); /* Light overlay for readability */
+            background: rgba(0, 0, 0, 0.2); 
         }
 
-        /* Content wrapper */
         .hero-content {
             position: relative;
             z-index: 1;
@@ -66,7 +121,7 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
-        /* BUTTON STYLES (Clear start, Color on hover) */
+        /* BUTTON STYLES */
         .hero-buttons {
             display: flex;
             gap: 20px;
@@ -82,15 +137,12 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            
-            /* Start Transparent */
             background-color: transparent; 
             border: 2px solid white;
             color: white;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
-        /* Button 1 Hover: Fills Blue */
         .btn-primary:hover {
             background-color: #2980b9; 
             border-color: #2980b9;
@@ -98,32 +150,15 @@
             text-shadow: none;
         }
 
-        /* Button 2 Hover: Fills White */
         .btn-outline:hover {
             background-color: white; 
             color: #333;
             text-shadow: none;
         }
 
-        /* --- NAVIGATION STYLES FOR MOBILE --- */
-        /* Ensuring navbar has relative positioning for the dropdown to stick to */
-        .navbar {
-            position: relative; 
-            z-index: 1000;
-        }
-        
-        /* Ensure hamburger is hidden on desktop by default */
-        .hamburger {
-            display: none;
-            font-size: 1.8rem;
-            cursor: pointer;
-            color: #333;
-        }
-
         /* MOBILE ADJUSTMENTS */
-        @media (max-width: 900px) { /* Changed to 900px to help testing on VS Code */
+        @media (max-width: 900px) { 
             .hero {
-                /* Switch to vertical photo on mobile */
                 background-image: url('images/hero-view2.jpg');
                 padding-top: 120px; 
             }
@@ -131,32 +166,34 @@
             .hero p { font-size: 1.2rem; }
             .hero-buttons { flex-direction: column; gap: 15px; }
 
-            /* Grid Fix */
             .grid-2 { grid-template-columns: 1fr; }
 
-            /* --- HAMBURGER MENU CSS LOGIC --- */
-            .hamburger { display: block; } /* Show the icon */
+            /* --- HAMBURGER MENU LOGIC --- */
+            .hamburger { display: block; }
 
             .nav-links {
-                display: none; /* Hide the menu items by default */
+                display: none; 
                 flex-direction: column;
                 position: absolute;
-                top: 100%; /* Position right below the header */
+                top: 100%; 
                 left: 0;
                 width: 100%;
-                background-color: #fff;
+                
+                /* CHANGED: Background is now BLUE so white text is visible */
+                background-color: #2980b9; 
+                
                 padding: 20px 0;
-                border-top: 1px solid #eee;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
 
-            .nav-links.active {
-                display: flex; /* This class is added by JS to show the menu */
-            }
+            .nav-links.active { display: flex; }
 
-            .nav-links li {
-                text-align: center;
-                margin: 10px 0;
+            .nav-links li { text-align: center; margin: 10px 0; }
+            
+            /* Text stays white, but can wrap if needed on mobile */
+            .nav-links a { 
+                white-space: normal; 
+                color: #fff; 
             }
         }
 
