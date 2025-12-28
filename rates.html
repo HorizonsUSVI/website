@@ -110,7 +110,12 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         /* Banner Styling */
-        .page-banner { width: 100%; height: auto; display: block; max-height: 400px; object-fit: cover; }
+        .page-banner { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            /* Removed max-height so image is not cropped */
+        }
 
         /* Rates Card Styling */
         .rates-section {
@@ -167,7 +172,7 @@
 </head>
 <body>
 
-   <nav class="navbar solid-nav">
+    <nav class="navbar solid-nav">
         <div class="container nav-flex">
             <a href="index.html" class="logo">Horizons USVI</a>
             
@@ -185,15 +190,15 @@
         </div>
     </nav>
 
-    <div>
-        <img src="images/banner.jpg" alt="St. John USVI" class="page-banner">
-    </div>
-
     <div class="container">
         
         <div style="text-align: center; margin-top: 40px;">
             <h1>Rates & Availability</h1>
-            <p style="font-size: 1.2rem; margin-top: 10px;">Select a cottage below to view details and check the calendar.</p>
+            <p style="font-size: 1.2rem; margin-top: 10px; margin-bottom: 20px;">Select a cottage below to view details and check the calendar.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <img src="images/banner.jpg" alt="St. John USVI" class="page-banner">
         </div>
 
         <div class="rates-section" id="horizons">
