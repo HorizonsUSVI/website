@@ -14,7 +14,7 @@
 
     <style>
         /* INTERNAL STYLES FOR RATES PAGE */
-        body { font-family: 'Lato', sans-serif; color: #333; line-height: 1.6; background-color: #fcfcfc; }
+        body { font-family: 'Lato', sans-serif; color: #333; line-height: 1.6; background-color: #f9fbfd; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: #2c3e50; }
 
         /* --- NAVIGATION STYLES (MATCHING INDEX.HTML) --- */
@@ -55,7 +55,7 @@
             font-weight: 700;
             font-size: 0.9rem;
             transition: color 0.3s;
-            white-space: nowrap; /* Prevents Wrapping */
+            white-space: nowrap; 
         }
 
         .nav-links a:hover, .nav-links a.active {
@@ -67,7 +67,7 @@
             color: white !important;
             padding: 8px 15px;
             border-radius: 4px;
-            border: 1px solid white; /* Added border so it pops on blue background */
+            border: 1px solid white; 
         }
         
         .hamburger {
@@ -88,10 +88,7 @@
                 top: 100%; 
                 left: 0;
                 width: 100%;
-                
-                /* Blue Background for dropdown so white text pops */
                 background-color: #2980b9; 
-                
                 padding: 20px 0;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
@@ -100,7 +97,6 @@
 
             .nav-links li { text-align: center; margin: 10px 0; }
             
-            /* Text stays white, but can wrap if needed on mobile */
             .nav-links a { 
                 white-space: normal; 
                 color: #fff; 
@@ -109,23 +105,51 @@
         
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* Banner Styling */
-        .page-banner { 
-            width: 100%; 
-            height: auto; 
-            display: block; 
-            /* Removed max-height so image is not cropped */
+        /* --- UPDATED PAGE HEADER WITH BACKGROUND IMAGE --- */
+        .page-header {
+            position: relative;
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('images/banner.jpg');
+            background-size: cover;
+            background-position: center center;
+            text-align: center;
+            color: white;
+            /* Padding positions text near top in the sky area */
+            padding: 50px 20px 180px 20px;
+            margin-bottom: 0; 
         }
+        
+        .page-header h1 {
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+             color: #f0f0f0;
+             font-size: 1.2rem;
+             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+             margin-bottom: 0;
+        }
+
+        /* --- COLOR THEMES --- */
+        /* Horizons Theme (Ocean Teal) */
+        .horizons-theme { --theme-color: #008CBA; --theme-light: #e0f7fa; }
+        
+        /* Sugar Bird Theme (Sunset Coral) */
+        .sugarbird-theme { --theme-color: #FF7F50; --theme-light: #fff3e0; }
 
         /* Rates Card Styling */
         .rates-section {
             background-color: #fff;
             border: 1px solid #e1e1e1;
-            border-radius: 4px;
+            border-radius: 8px;
             padding: 40px;
             margin: 40px 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--theme-color);
+            transition: transform 0.2s;
         }
+        .rates-section:hover { transform: translateY(-2px); }
 
         .rates-header {
             text-align: center;
@@ -133,6 +157,7 @@
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
+        .rates-header h2 { color: var(--theme-color); margin-bottom: 5px; }
 
         .rates-grid {
             display: grid;
@@ -141,10 +166,46 @@
         }
 
         .price-item { margin-bottom: 15px; font-size: 1.1rem; }
-        .price-highlight { color: #2980b9; font-weight: 700; font-size: 1.2rem; }
-        .fine-print { font-size: 0.9rem; color: #666; margin-top: 20px; font-style: italic; }
+        
+        .price-highlight { 
+            color: var(--theme-color); 
+            font-weight: 800; 
+            font-size: 1.4rem;
+        }
+        
+        .fine-print { font-size: 0.85rem; color: #888; margin-top: 20px; font-style: italic; }
 
-        .email-link { color: #2980b9; font-weight: bold; text-decoration: none; }
+        /* Styled List with Checkmarks */
+        .details-list { list-style: none; padding: 0; margin-top: 20px; }
+        .details-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        .details-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--theme-color);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Booking Box Styling */
+        .book-box {
+            margin-top: 30px;
+            background-color: var(--theme-light);
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid var(--theme-color);
+        }
+
+        .email-link { 
+            color: var(--theme-color); 
+            font-weight: bold; 
+            text-decoration: none; 
+            font-size: 1.1rem;
+        }
         .email-link:hover { text-decoration: underline; }
 
         /* CALENDAR EMBED STYLING */
@@ -190,18 +251,16 @@
         </div>
     </nav>
 
+    <header class="page-header">
+        <div class="container">
+            <h1>Rates & Availability</h1>
+            <p class="subtitle">Select a cottage below to view details and check the calendar.</p>
+        </div>
+    </header>
+
     <div class="container">
         
-        <div style="text-align: center; margin-top: 40px;">
-            <h1>Rates & Availability</h1>
-            <p style="font-size: 1.2rem; margin-top: 10px; margin-bottom: 20px;">Select a cottage below to view details and check the calendar.</p>
-        </div>
-
-        <div style="margin-bottom: 40px;">
-            <img src="images/banner.jpg" alt="St. John USVI" class="page-banner">
-        </div>
-
-        <div class="rates-section" id="horizons">
+        <div class="rates-section horizons-theme" id="horizons">
             <div class="rates-header">
                 <h2>Horizons Cottage</h2>
                 <p>Perfect for families or groups (Sleeps 1-4)</p>
@@ -213,7 +272,7 @@
                     <p class="price-item"><span class="price-highlight">$350 / night</span><br>Standard Rate (1-2 people)</p>
                     <p class="price-item"><span class="price-highlight">$395 / night</span><br>High Season (Thanksgiving week through April 15)</p>
                     
-                    <ul style="margin-top: 20px; padding-left: 20px;">
+                    <ul class="details-list">
                         <li><strong>6 night minimum</strong> stay</li>
                         <li>Additional guests: Add <strong>$50 each/night</strong> (3-4 people)</li>
                         <li>Cleaning fee: <strong>$200</strong> per stay</li>
@@ -222,8 +281,8 @@
                     
                     <p class="fine-print">* Rates do not include the Virgin Island Hotel Tax of 12.5%</p>
 
-                    <div style="margin-top: 30px; background-color: #f0f8ff; padding: 15px; border-radius: 4px;">
-                        <h4 style="margin-bottom: 5px;">Ready to Book?</h4>
+                    <div class="book-box">
+                        <h4 style="margin-bottom: 5px; color: #333;">Ready to Book?</h4>
                         <p>Contact Jennifer directly:<br>
                         <a href="mailto:HorizonsUSVI@gmail.com" class="email-link">HorizonsUSVI@gmail.com</a></p>
                     </div>
@@ -237,7 +296,7 @@
             </div>
         </div>
 
-        <div class="rates-section" id="sugarbird">
+        <div class="rates-section sugarbird-theme" id="sugarbird">
             <div class="rates-header">
                 <h2>Sugar Bird Cottage</h2>
                 <p>A romantic getaway for couples (Max 2 people)</p>
@@ -249,7 +308,7 @@
                     <p class="price-item"><span class="price-highlight">$275 / night</span><br>Standard Rate</p>
                     <p class="price-item"><span class="price-highlight">$325 / night</span><br>High Season (Thanksgiving week through April 15)</p>
                     
-                    <ul style="margin-top: 20px; padding-left: 20px;">
+                    <ul class="details-list">
                         <li><strong>6 night minimum</strong> stay</li>
                         <li>Maximum Occupancy: <strong>2 people</strong></li>
                         <li>Cleaning fee: <strong>$150</strong> per stay</li>
@@ -258,8 +317,8 @@
 
                     <p class="fine-print">* Rates do not include the Virgin Island Hotel Tax of 12.5%</p>
 
-                    <div style="margin-top: 30px; background-color: #f0f8ff; padding: 15px; border-radius: 4px;">
-                        <h4 style="margin-bottom: 5px;">Ready to Book?</h4>
+                    <div class="book-box">
+                        <h4 style="margin-bottom: 5px; color: #333;">Ready to Book?</h4>
                         <p>Contact Jennifer directly:<br>
                         <a href="mailto:SugarbirdUSVI@gmail.com" class="email-link">SugarbirdUSVI@gmail.com</a></p>
                     </div>

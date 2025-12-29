@@ -101,21 +101,51 @@
             }
         }
 
+        /* --- UPDATED PAGE HEADER WITH BACKGROUND IMAGE --- */
+        .page-header {
+            position: relative;
+            /* Adds a subtle dark overlay so white text pops against the sky */
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.1)), url('images/banner-sunrise.jpg');
+            background-size: cover;
+            background-position: center center; /* Changed to center center to try and show more middle ground */
+            text-align: center;
+            color: white;
+            /* UPDATED PADDING: Less on top to move text up, more on bottom to show more image */
+            padding: 50px 20px 180px 20px;
+            margin-bottom: 0; 
+        }
+        
+        .page-header h1 {
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Ensures readability */
+        }
+        
+        .subtitle {
+             color: #f0f0f0;
+             font-size: 1.2rem;
+             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+             margin-bottom: 0;
+        }
+
         /* --- REVIEW PAGE SPECIFIC STYLES --- */
         .review-card {
             background: white;
             padding: 2rem;
-            border-radius: 4px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 8px; /* Softer corners matching rates page */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Deeper shadow matching rates page */
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border-top: 3px solid transparent; 
+            border-top: 6px solid transparent; /* Thicker border matching rates page */
+            transition: transform 0.2s;
         }
-        /* Subtle accent border at top of card based on property */
-        .card-sugarbird { border-top-color: #d35400; }
-        .card-horizons { border-top-color: #006994; }
+        .review-card:hover { transform: translateY(-2px); }
+
+        /* Accent border colors updated to match Rates Page themes (Coral & Teal) */
+        .card-sugarbird { border-top-color: #FF7F50; } 
+        .card-horizons { border-top-color: #008CBA; }
 
         .stars {
             color: #f1c40f; /* Gold */
@@ -154,14 +184,14 @@
             font-weight: bold;
             letter-spacing: 0.5px;
         }
-        .badge-horizons { background-color: #e3f2fd; color: #006994; }
-        .badge-sugarbird { background-color: #fff3e0; color: #d35400; }
+        /* Badge colors updated to match Rates Page themes */
+        .badge-horizons { background-color: #e0f7fa; color: #008CBA; }
+        .badge-sugarbird { background-color: #fff3e0; color: #FF7F50; }
         
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         /* Styles for the Platform Links Section */
@@ -169,8 +199,11 @@
             background-color: var(--bg-offwhite);
             padding: 1.5rem;
             border-radius: 4px;
-            margin-top: 1rem;
             border: 1px solid #eee;
+            display: block; /* changed to block for centering */
+            margin: 40px auto; /* Center horizontally, add vertical spacing */
+            max-width: 800px; /* Ensure it doesn't get too wide */
+            text-align: center;
         }
         .platform-group {
             display: inline-block;
@@ -212,27 +245,27 @@
         <div class="container">
             <h1>Guest Reviews</h1>
             <p class="subtitle">Verified experiences from our guests over the years.</p>
-            
-            <div class="platform-links-container">
-                <p style="margin-bottom: 0.5rem;">View our listings and reviews directly on booking platforms:</p>
-                
-                <div class="platform-group">
-                    <strong>Airbnb:</strong>
-                    <a href="https://www.airbnb.com/rooms/54245710?source_impression_id=p3_1766888379_P3czehWyW0rgJJgo" target="_blank" class="platform-link">Horizons</a> | 
-                    <a href="https://www.airbnb.com/rooms/1075563030397925585?source_impression_id=p3_1766888420_P3--B5UuK6QK07mD" target="_blank" class="platform-link">Sugar Bird</a>
-                </div>
-
-                <div class="platform-group">
-                    <strong>VRBO:</strong>
-                    <a href="https://www.vrbo.com/2578721" target="_blank" class="platform-link">Horizons</a> | 
-                    <a href="https://www.vrbo.com/2615917" target="_blank" class="platform-link">Sugar Bird</a>
-                </div>
-            </div>
-
         </div>
     </header>
 
     <section class="container content-spacing">
+        
+        <div class="platform-links-container">
+            <p style="margin-bottom: 0.5rem;">View our listings and reviews directly on booking platforms:</p>
+            
+            <div class="platform-group">
+                <strong>Airbnb:</strong>
+                <a href="https://www.airbnb.com/rooms/54245710?source_impression_id=p3_1766888379_P3czehWyW0rgJJgo" target="_blank" class="platform-link">Horizons</a> | 
+                <a href="https://www.airbnb.com/rooms/1075563030397925585?source_impression_id=p3_1766888420_P3--B5UuK6QK07mD" target="_blank" class="platform-link">Sugar Bird</a>
+            </div>
+
+            <div class="platform-group">
+                <strong>VRBO:</strong>
+                <a href="https://www.vrbo.com/2578721" target="_blank" class="platform-link">Horizons</a> | 
+                <a href="https://www.vrbo.com/2615917" target="_blank" class="platform-link">Sugar Bird</a>
+            </div>
+        </div>
+
         <div class="reviews-grid">
             
             <div class="review-card card-sugarbird">
