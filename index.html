@@ -20,6 +20,12 @@
         body, html { height: 100%; margin: 0; font-family: 'Lato', sans-serif; color: #333; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
+        /* --- COLORS --- */
+        :root {
+            --horizons-teal: #008CBA;
+            --sugarbird-coral: #FF7F50;
+        }
+
         /* --- NAVIGATION STYLES --- */
         .navbar {
             padding: 15px 0;
@@ -41,6 +47,9 @@
             color: #fff; /* White Text */
             font-weight: bold;
             white-space: nowrap; 
+            /* Added for Logo Alignment */
+            display: flex;
+            align-items: center;
         }
 
         .nav-links {
@@ -70,7 +79,7 @@
             color: white !important;
             padding: 8px 15px;
             border-radius: 4px;
-            border: 1px solid white; /* Added border so it pops on blue background */
+            border: 1px solid white; 
         }
         
         .hamburger {
@@ -180,12 +189,27 @@
             overflow: hidden;
             text-align: center;
             transition: transform 0.3s ease;
+            
+            /* ADDED: Thick top border foundation */
+            border-top: 6px solid transparent;
         }
         .card:hover { transform: translateY(-5px); }
         
+        /* BRANDED CARDS */
+        .card-horizons { border-top-color: var(--horizons-teal); }
+        .card-sugarbird { border-top-color: var(--sugarbird-coral); }
+
         .card-text { padding: 30px; }
         .card-text h3 { margin-top: 0; color: #2c3e50; }
-        .text-link { color: #2980b9; text-decoration: none; font-weight: bold; }
+        
+        /* BRANDED LINKS */
+        .text-link { text-decoration: none; font-weight: bold; transition: color 0.2s; }
+        
+        .link-horizons { color: var(--horizons-teal); }
+        .link-horizons:hover { color: #00779e; }
+        
+        .link-sugarbird { color: var(--sugarbird-coral); }
+        .link-sugarbird:hover { color: #e06b42; }
         
         .media-section { padding: 60px 0; }
         .media-block { margin-bottom: 40px; text-align: center; }
@@ -205,7 +229,7 @@
             top: 0; left: 0; width: 100%; height: 100%; border: 0;
         }
 
-        /* --- MOBILE ADJUSTMENTS (Moved to bottom so they override desktop styles) --- */
+        /* --- MOBILE ADJUSTMENTS --- */
         @media (max-width: 900px) { 
             .hero {
                 background-image: url('images/hero-view2.jpg');
@@ -215,10 +239,8 @@
             .hero p { font-size: 1.2rem; }
             .hero-buttons { flex-direction: column; gap: 15px; }
 
-            /* Forces grid to stack on mobile */
             .grid-2 { grid-template-columns: 1fr; }
 
-            /* --- HAMBURGER MENU LOGIC --- */
             .hamburger { display: block; }
 
             .nav-links {
@@ -228,23 +250,14 @@
                 top: 100%; 
                 left: 0;
                 width: 100%;
-                
-                /* Blue Background for dropdown so white text pops */
                 background-color: #2980b9; 
-                
                 padding: 20px 0;
                 box-shadow: 0 5px 10px rgba(0,0,0,0.1);
             }
 
             .nav-links.active { display: flex; }
-
             .nav-links li { text-align: center; margin: 10px 0; }
-            
-            /* Text stays white, allow wrapping on mobile if needed */
-            .nav-links a { 
-                white-space: normal; 
-                color: #fff; 
-            }
+            .nav-links a { white-space: normal; color: #fff; }
         }
     </style>
 </head>
@@ -291,25 +304,25 @@
         <div class="container">
             <div class="grid-2">
                 
-                <div class="card">
+                <div class="card card-horizons">
                     <a href="horizons.html">
                         <img src="images/home-page/horizons.jpg" alt="Horizons Cottage" style="width:100%; height:300px; object-fit:cover; display:block;">
                     </a>
                     <div class="card-text">
                         <h3>Horizons Cottage</h3>
                         <p>A 2-bedroom, 2.5-bath open-concept villa with a large wrap-around deck. Perfect for families or couples seeking space.</p>
-                        <a href="horizons.html" class="text-link">Explore Horizons &rarr;</a>
+                        <a href="horizons.html" class="text-link link-horizons">Explore Horizons &rarr;</a>
                     </div>
                 </div>
 
-                <div class="card">
+                <div class="card card-sugarbird">
                     <a href="sugar-bird.html">
                         <img src="images/home-page/sugarbird.jpg" alt="Sugar Bird Cottage" style="width:100%; height:300px; object-fit:cover; display:block;">
                     </a>
                     <div class="card-text">
                         <h3>Sugar Bird Cottage</h3>
                         <p>A romantic 1-bedroom, 1.5-bath bungalow with three private decks. Ideal for honeymooners or solo adventurers.</p>
-                        <a href="sugar-bird.html" class="text-link">Explore Sugar Bird &rarr;</a>
+                        <a href="sugar-bird.html" class="text-link link-sugarbird">Explore Sugar Bird &rarr;</a>
                     </div>
                 </div>
 
