@@ -15,6 +15,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* --- HORIZONS TEAL THEME OVERRIDES --- */
+        :root {
+            --horizons-teal: #008CBA; 
+        }
+
+        /* Override the standard blue background */
+        .bg-horizons {
+            background-color: var(--horizons-teal);
+            color: white;
+        }
+
+        /* Override link colors for this page */
+        .text-link { 
+            color: var(--horizons-teal); 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        /* Override button colors for this page */
+        .btn-primary {
+            background-color: var(--horizons-teal) !important;
+            border-color: var(--horizons-teal) !important;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background-color: #00779e !important; /* Slightly darker teal */
+        }
+
         /* --- GALLERY STYLES --- */
         .gallery-container { 
             position: relative; 
@@ -85,6 +117,8 @@
             color: #fff; /* White Text */
             font-weight: bold;
             white-space: nowrap; 
+            display: flex;
+            align-items: center;
         }
 
         .nav-links {
@@ -161,7 +195,10 @@
 
     <nav class="navbar solid-nav">
         <div class="container nav-flex">
-            <a href="index.html" class="logo">Horizons USVI</a>
+            <a href="index.html" class="logo">
+                <img src="images/favicon.png" alt="Logo" style="height: 30px; margin-right: 10px; vertical-align: middle; background: white; border-radius: 50%; padding: 2px;">
+                Horizons USVI
+            </a>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="horizons.html" class="active">HORIZONS</a></li>
@@ -245,16 +282,16 @@
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
-        </div>
-    </section>
 
-    <section class="bg-offwhite padding-block">
-        <div class="container">
-            <div class="centered-text mb-2">
-                <h3>Tropical Screened Showers</h3>
-                <p>Both downstairs bathrooms have unique, completely screened, tropical showers.</p>
+            <h3 class="centered-text mt-4">Tropical Screened Showers</h3>
+            <p class="centered-text">Both downstairs bathrooms have unique, completely screened, tropical showers.</p>
+            
+            <div class="gallery-container" style="justify-content: center;">
+                <div class="swipe-gallery" style="justify-content: center;">
+                    <img src="images/horizons/horizon-13.jpg" alt="Screened Shower">
+                </div>
             </div>
-            <img src="images/horizons/horizon-13.jpg" alt="Screened Shower" class="hero-img shadow">
+
         </div>
     </section>
 
@@ -262,8 +299,10 @@
         <div class="container">
             <div class="centered-text mb-2">
                 <h2>Outdoor Living</h2>
-                <p>The upper level is surrounded with a huge, wrap-around deck. There’s enough space for outdoor dining and lounging.  Bask in the warm sunshine with the cool breeze, or cool off in the shaded areas.  The lower bedroom level deck is covered and has a hammock.</p>
+                <p>The upper level is surrounded with a huge, wrap-around deck. There’s enough space for outdoor dining and lounging. Bask in the warm sunshine with the cool breeze, or cool off in the shaded areas. The lower bedroom level deck is covered and has a hammock.</p>
             </div>
+
+            <img src="images/horizons/horizon-20.jpg" alt="Wrap around deck" class="hero-img shadow mb-2">
 
             <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
@@ -274,7 +313,6 @@
                     <img src="images/horizons/horizon-19.jpg" alt="Outdoor dining">
                     <img src="images/horizons/horizon-14.jpg" alt="Hammock on deck">
                     <img src="images/horizons/horizon-15.jpg" alt="Lower deck view">
-                    <img src="images/horizons/horizon-20.jpg" alt="Wrap around deck">
                 </div>
                 <button class="nav-btn next" type="button" onclick="scrollGallery(this, 1)">&#10095;</button>
             </div>
@@ -288,10 +326,11 @@
                 <p>The eastern exposure allows for cool, shaded afternoons and beautiful sunrises. The cottage is located near the end of a quiet, private, paved road.</p>
             </div>
 
+            <img src="images/horizons/horizon-21.jpg" alt="Island glow" class="hero-img shadow mb-2">
+
             <div class="gallery-container">
                 <button class="nav-btn prev" type="button" onclick="scrollGallery(this, -1)">&#10094;</button>
                 <div class="swipe-gallery">
-                    <img src="images/horizons/horizon-21.jpg" alt="Island glow">
                     <img src="images/horizons/horizon-22.jpg" alt="Sunset">
                     <img src="images/horizons/horizon-23.jpg" alt="Ocean view">
                     <img src="images/horizons/horizon-24.jpg" alt="Ocean view 2">
@@ -303,7 +342,7 @@
         </div>
     </section>
 
-    <section class="bg-blue text-white padding-block">
+    <section class="bg-horizons text-white padding-block">
         <div class="container">
             <h2 class="text-white centered-text">Amenities</h2>
             <div class="amenities-grid">
@@ -336,7 +375,7 @@
             <h3>Ready to Book?</h3>
             <p>Contact Jennifer at: <strong><a href="mailto:horizonsusvi@gmail.com?subject=Horizons%20Cottage" class="text-link">HorizonsUSVI@gmail.com</a></strong></p>
             <p>Coral Bay, St. John, US Virgin Islands</p>
-       
+        
             <a href="rates.html" class="btn btn-primary mt-2">Check Rates & Availability</a>
         </div>
     </section>
