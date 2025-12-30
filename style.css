@@ -74,11 +74,16 @@ p { margin-bottom: 1rem; font-size: 1.1rem; }
 }
 
 .logo {
-    font-family: var(--font-serif);
+    font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: white;
+    text-decoration: none;
+    color: #fff; 
     font-weight: bold;
-    letter-spacing: 1px;
+    white-space: nowrap; 
+    
+    /* These lines align the image and text: */
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
