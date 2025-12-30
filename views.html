@@ -36,6 +36,8 @@
             color: #fff; /* White Text */
             font-weight: bold;
             white-space: nowrap; 
+            display: flex;
+            align-items: center;
         }
 
         .nav-links {
@@ -75,37 +77,28 @@
             color: #fff; /* White Icon */
         }
 
-        /* --- MOBILE ADJUSTMENTS (900px Breakpoint) --- */
-        @media (max-width: 900px) { 
-            .hamburger { display: block; }
-
-            .nav-links {
-                display: none; 
-                flex-direction: column;
-                position: absolute;
-                top: 100%; 
-                left: 0;
-                width: 100%;
-                /* Blue Background for dropdown so white text pops */
-                background-color: #2980b9; 
-                padding: 20px 0;
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            }
-
-            .nav-links.active { display: flex; }
-
-            .nav-links li { text-align: center; margin: 10px 0; }
-            
-            /* Text stays white, allow wrapping on mobile if needed */
-            .nav-links a { 
-                white-space: normal; 
-                color: #fff; 
-            }
+        /* --- VIDEO RESPONSIVE STYLES --- */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         /* --- PARALLAX STYLES --- */
         .parallax-window {
-            min-height: 500px; /* How tall the 'window' is */
+            min-height: 500px; /* Desktop Height */
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -115,17 +108,37 @@
         }
 
         /* Specific Images for the Parallax Windows */
-        /* Parallax 1 is Image 03 */
         .parallax-1 { background-image: url('images/views/03-view.jpg'); }
-        
-        /* Parallax 2 is Image 04 */
         .parallax-2 { background-image: url('images/views/04-view.jpg'); }
 
-        /* Mobile Fix: Parallax can be glitchy on phones, so we turn it off for small screens */
-        @media (max-width: 768px) {
+        /* --- MOBILE ADJUSTMENTS (900px Breakpoint) --- */
+        @media (max-width: 900px) { 
+            /* Hamburger Menu */
+            .hamburger { display: block; }
+
+            .nav-links {
+                display: none; 
+                flex-direction: column;
+                position: absolute;
+                top: 100%; 
+                left: 0;
+                width: 100%;
+                background-color: #2980b9; 
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active { display: flex; }
+            .nav-links li { text-align: center; margin: 10px 0; }
+            .nav-links a { white-space: normal; color: #fff; }
+
+            /* --- PARALLAX MOBILE FIX --- */
             .parallax-window {
-                background-attachment: scroll;
-                min-height: 300px;
+                background-attachment: scroll; 
+                background-position: center;
+                background-size: cover;
+                min-height: auto; 
+                aspect-ratio: 3/2; 
             }
         }
     </style>
@@ -163,7 +176,7 @@
     <section class="container content-spacing">
         <div class="media-block">
             <img src="images/views/01-view.jpg" alt="Panoramic View from Deck" class="hero-img shadow">
-            <p class="caption">This is not a drone photo – I took this from an iPhone in panoramic mode from the deck at Sugar Bird Cottage. Horizons Cottage has a slightly higher vantage point. The views are truly spectacular!</p>
+            <p class="caption">This photo was taken from the deck at Sugar Bird Cottage, it is not from a drone.  Horizons Cottage has a slightly higher vantage point. The views are truly spectacular!</p>
         </div>
     </section>
 
@@ -176,6 +189,12 @@
     </section>
 
     <div class="parallax-window parallax-2"></div>
+
+    <section class="container content-spacing" style="margin-top: 50px;">
+        <div class="video-container shadow">
+            <iframe src="https://www.youtube.com/embed/3086jvJ1RzM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
 
     <section class="container padding-block centered-text">
         <div class="container">
